@@ -1,0 +1,3 @@
+rootProject.name = 'edifySummer2018'
+
+include ':app'
