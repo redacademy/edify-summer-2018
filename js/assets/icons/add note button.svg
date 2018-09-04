@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="41px" viewBox="0 0 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>add note button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="child-notes" transform="translate(-165.000000, -501.000000)">
+            <g id="add-note-button" transform="translate(165.000000, 501.000000)">
+                <rect id="button" fill="#5F59A5" fill-rule="nonzero" transform="translate(20.378680, 20.500000) rotate(-90.000000) translate(-20.378680, -20.500000) " x="0.378679656" y="0.5" width="40" height="40" rx="5"></rect>
+                <path d="M11.2516213,11.806746 L28.6381292,29.193254" id="Line-3-Copy-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" transform="translate(19.944875, 20.500000) rotate(-45.000000) translate(-19.944875, -20.500000) "></path>
+                <path d="M28.6378708,11.6011221 L11.250115,28.9888779" id="Line-3-Copy-2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" transform="translate(19.943993, 20.295000) rotate(-45.000000) translate(-19.943993, -20.295000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

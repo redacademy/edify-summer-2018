@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="104px" viewBox="0 0 122 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>monkey@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="monkey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(4.000000, 15.000000)" fill-rule="nonzero">
+            <circle id="ear" fill="#E34F44" cx="20" cy="29" r="20"></circle>
+            <circle id="ear" fill="#E34F44" cx="97" cy="29" r="20"></circle>
+            <circle id="inner-ear" fill="#F3B4AF" cx="97.5" cy="29.5" r="14.5"></circle>
+            <circle id="inner-ear" fill="#F3B4AF" cx="20.5" cy="29.5" r="14.5"></circle>
+            <circle id="head" fill="#E34F44" cx="57" cy="37" r="37"></circle>
+            <circle id="eye-patch" fill="#F3B4AF" cx="48" cy="34" r="16"></circle>
+            <circle id="eye-patch" fill="#F3B4AF" cx="70" cy="34" r="16"></circle>
+            <circle id="eye" fill="#6D2620" cx="44.5" cy="29.5" r="3.5"></circle>
+            <circle id="eye" fill="#6D2620" cx="69.5" cy="29.5" r="3.5"></circle>
+            <circle id="nose" fill="#7D2B25" cx="57.5" cy="49.5" r="12.5"></circle>
+            <g id="nostrils" transform="translate(52.000000, 41.000000)" fill="#F3B4AF">
+                <ellipse id="eye-copy" cx="1.25" cy="1" rx="1.25" ry="1"></ellipse>
+                <ellipse id="eye-copy-2" cx="10.75" cy="1" rx="1.25" ry="1"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
