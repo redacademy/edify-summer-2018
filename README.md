@@ -1,5 +1,11 @@
-# Description
+# Edify App:
+An App built with _react native_ 
 
-#Authors
+## Team:
+Cody
+Pam
+Andrei
+Effat
 
-Cody, Pam, Effat, Andrei
+### Installation: 
+Later
