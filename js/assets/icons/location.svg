@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="34px" viewBox="0 0 24 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tab-Bar" transform="translate(-131.000000, -17.000000)" fill="#FFFFFF">
+            <path d="M138.490079,26.7141178 C138.490079,24.0318476 140.664859,21.8571429 143.347222,21.8571429 C146.029585,21.8571429 148.204365,24.0318476 148.204365,26.7141178 C148.204365,29.3967239 146.029585,31.5714286 143.347222,31.5714286 C140.664859,31.5714286 138.490079,29.3967239 138.490079,26.7141178 Z M131.690079,28.3507445 C131.690079,34.6197378 143.347222,51 143.347222,51 C143.347222,51 155.004365,34.6197378 155.004365,28.3507445 C155.004365,22.0820797 149.785101,17 143.347222,17 C136.909006,17 131.690079,22.0820797 131.690079,28.3507445 Z" id="location"></path>
+        </g>
+    </g>
+</svg>

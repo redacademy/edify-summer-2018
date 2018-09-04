@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="122px" height="104px" viewBox="0 0 122 104" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Fox@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M54.4871795,89.8825026 C55.2926707,89.8825026 94.5853413,58.3050535 94.5853413,58.3050535 C94.5853413,58.3050535 75.7430618,19 54.4871795,19 C33.2312972,19 16,56.8666667 16,57.5428571 C16,58.2190476 53.6816883,89.8825026 54.4871795,89.8825026 Z" id="path-1"></path>
+    </defs>
+    <g id="Fox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fox-Avatar" transform="translate(7.000000, 0.000000)">
+            <path d="M28.018136,46.9968655 C34.2085789,47.2882008 43,27.2028809 43,15.086949 C43,2.97101702 10,2.97101702 10,15.086949 C10,27.2028809 21.8276932,46.7055303 28.018136,46.9968655 Z" id="outer-ear" fill="#E34F44" transform="translate(26.500000, 26.500000) scale(-1, 1) rotate(-140.000000) translate(-26.500000, -26.500000) "></path>
+            <path d="M26.5580948,41.9977065 C30.8726459,42.2108786 37,27.5143031 37,18.648987 C37,9.78367099 14,9.78367099 14,18.648987 C14,27.5143031 22.2435438,41.7845344 26.5580948,41.9977065 Z" id="inner-ear" fill="#000000" opacity="0.516964286" transform="translate(25.500000, 27.000000) scale(-1, 1) rotate(-140.000000) translate(-25.500000, -27.000000) "></path>
+            <path d="M84.018136,48.9968655 C90.2085789,49.2882008 99,29.2028809 99,17.086949 C99,4.97101702 66,4.97101702 66,17.086949 C66,29.2028809 77.8276932,48.7055303 84.018136,48.9968655 Z" id="outer-ear" fill="#E34F44" transform="translate(82.500000, 28.500000) rotate(-140.000000) translate(-82.500000, -28.500000) "></path>
+            <path d="M83.5580948,43.9977065 C87.8726459,44.2108786 94,29.5143031 94,20.648987 C94,11.783671 71,11.783671 71,20.648987 C71,29.5143031 79.2435438,43.7845344 83.5580948,43.9977065 Z" id="inner-ear" fill="#000000" opacity="0.516964286" transform="translate(82.500000, 29.000000) rotate(-140.000000) translate(-82.500000, -29.000000) "></path>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="face" fill="#E34F44" xlink:href="#path-1"></use>
+            <ellipse id="eye-patch" fill="#FFFFFF" opacity="0.58" mask="url(#mask-2)" cx="22.7521368" cy="60.247619" rx="27.008547" ry="27.047619"></ellipse>
+            <ellipse id="eye-patch" fill="#FFFFFF" opacity="0.575055804" mask="url(#mask-2)" cx="86.8974359" cy="60.247619" rx="27.008547" ry="27.047619"></ellipse>
+            <polygon id="nose" fill-opacity="0.67" fill="#000000" opacity="0.67" mask="url(#mask-2)" transform="translate(54.487179, 88.533333) scale(1, -1) translate(-54.487179, -88.533333) " points="54.4871795 87.0666667 64.6153846 90 44.3589744 90"></polygon>
+            <ellipse id="eye" fill="#000000" mask="url(#mask-2)" cx="37.3333333" cy="59.0588235" rx="4.66666667" ry="4.94117647"></ellipse>
+            <ellipse id="eye" fill="#000000" mask="url(#mask-2)" cx="76.3333333" cy="59.0588235" rx="4.66666667" ry="4.94117647"></ellipse>
+        </g>
+    </g>
+</svg>

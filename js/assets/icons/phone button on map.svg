@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>phone button on map</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="56" height="56" rx="5"></rect>
+        <filter x="-12.5%" y="-8.9%" width="125.0%" height="125.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map" transform="translate(-299.000000, -371.000000)">
+            <g id="phone-button-on-map" transform="translate(303.000000, 373.000000)">
+                <g id="button">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <path d="M33.5002658,25.3122117 C33.2004306,25.1124011 32.9005955,24.8126853 32.7007053,24.6128747 L32.6007603,24.6128747 L32.6007603,24.5129694 C30.9016943,22.9144849 30.1021338,20.5167582 30.8017492,18.2189367 C32.101035,13.2236726 38.1976837,11.1256617 42.095541,15.0219677 C42.4953213,15.4215888 42.9950466,16.0210205 43.1949367,16.5205469 C46.3931786,22.6147691 39.2970793,31.4064339 35.2992769,35.3027399 C31.4014196,39.2989511 22.6062542,46.3922261 16.7094957,43.1952571 C16.0098803,42.9954465 15.4102099,42.4959201 15.0104296,42.096299 C13.3113636,40.2980039 12.6117482,38.1000877 13.2114186,35.702361 C14.6106494,30.8070022 20.8072432,28.7089913 24.5052104,32.6052973 L24.6051554,32.6052973 L24.6051554,32.7052025 C24.8050456,32.9050131 25.1048808,33.1048237 25.3047709,33.5044448 C28.7029029,31.3065286 31.3014745,28.7089913 33.5002658,25.3122117 Z" id="phone" fill="#36357F"></path>
+            </g>
+        </g>
+    </g>
+</svg>
