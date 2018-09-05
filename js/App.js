@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import OnboardingContainer from './screens/Onboarding/index'
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.welcome}>This is our awesome application</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+      <OnboardingContainer/>
       </View>
     );
   }
