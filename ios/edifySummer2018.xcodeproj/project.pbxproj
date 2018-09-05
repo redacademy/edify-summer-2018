@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -12,6 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* edifySummer2018Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* edifySummer2018Tests.m */; };
+		0F1362E5DB9D43B3B3900375 /* Mark Simonson - Proxima Nova Alt Regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387B558AF96F479AB0389A00 /* Mark Simonson - Proxima Nova Alt Regular-webfont.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -34,19 +36,20 @@
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* edifySummer2018Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* edifySummer2018Tests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
-		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		8754B58910E1400688CB3E81 /* BalooBhai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B41D5CB567C149D5A3339C16 /* BalooBhai-Regular.ttf */; };
-		BCB99688301946F19C81F93B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916AFA1777964E52B33EC92D /* BalooBhaina-Regular.ttf */; };
-		47643DAD90E34AF6ADA43643 /* Mark Simonson - Proxima Nova Alt Black-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E96AC0FA2124818B3348C17 /* Mark Simonson - Proxima Nova Alt Black-webfont.ttf */; };
-		7722AB6E4E004430AC160BA9 /* Mark Simonson - Proxima Nova Alt Bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4D057D1A9B0458D9300838A /* Mark Simonson - Proxima Nova Alt Bold-webfont.ttf */; };
-		D620BDE3845B4E49B278B001 /* Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92DE3DFD3B614ADBB4CEDD48 /* Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf */; };
-		AE0E771CF0814B61988C8607 /* Mark Simonson - Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83026B9C70A840D3A5335CBF /* Mark Simonson - Proxima Nova Alt Light.otf */; };
-		0F1362E5DB9D43B3B3900375 /* Mark Simonson - Proxima Nova Alt Regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387B558AF96F479AB0389A00 /* Mark Simonson - Proxima Nova Alt Regular-webfont.ttf */; };
 		3E56837D6EB74841B71F507F /* Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1931224865C84924BF90D46A /* Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf */; };
-		EA50EFA64DD4437FBE1B2D10 /* Mark Simonson - Proxima Nova Semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE48BD2D5AE7474A85A144D6 /* Mark Simonson - Proxima Nova Semibold-webfont.ttf */; };
+		47643DAD90E34AF6ADA43643 /* Mark Simonson - Proxima Nova Alt Black-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E96AC0FA2124818B3348C17 /* Mark Simonson - Proxima Nova Alt Black-webfont.ttf */; };
+		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		5EA3E3B223464ECCA6C1A304 /* Mark Simonson - Proxima Nova Thin-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27B06D149DFB4C9DA4930485 /* Mark Simonson - Proxima Nova Thin-webfont.ttf */; };
+		7722AB6E4E004430AC160BA9 /* Mark Simonson - Proxima Nova Alt Bold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4D057D1A9B0458D9300838A /* Mark Simonson - Proxima Nova Alt Bold-webfont.ttf */; };
+		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		87027E2F42C749BAAC898484 /* libRNSVG-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D29ADA3665B04BE7B99E058E /* libRNSVG-tvOS.a */; };
+		8754B58910E1400688CB3E81 /* BalooBhai-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B41D5CB567C149D5A3339C16 /* BalooBhai-Regular.ttf */; };
+		97243F8CBB3C499B80A59257 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C830637D6E44F3FAF7F8C4C /* libRNSVG.a */; };
+		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		AE0E771CF0814B61988C8607 /* Mark Simonson - Proxima Nova Alt Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 83026B9C70A840D3A5335CBF /* Mark Simonson - Proxima Nova Alt Light.otf */; };
+		BCB99688301946F19C81F93B /* BalooBhaina-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 916AFA1777964E52B33EC92D /* BalooBhaina-Regular.ttf */; };
+		D620BDE3845B4E49B278B001 /* Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 92DE3DFD3B614ADBB4CEDD48 /* Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf */; };
+		EA50EFA64DD4437FBE1B2D10 /* Mark Simonson - Proxima Nova Semibold-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE48BD2D5AE7474A85A144D6 /* Mark Simonson - Proxima Nova Semibold-webfont.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +312,20 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTLinking;
 		};
+		813A29F52140809C00683945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8654D7685AB444AFBC11F3A4 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CF68AC11AF0540F00FF9E5C;
+			remoteInfo = RNSVG;
+		};
+		813A29F72140809C00683945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8654D7685AB444AFBC11F3A4 /* RNSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94DDAC5C1F3D024300EED511;
+			remoteInfo = "RNSVG-tvOS";
+		};
 		832341B41AAA6A8300B99B32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */;
@@ -345,23 +362,26 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = edifySummer2018/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = edifySummer2018/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1931224865C84924BF90D46A /* Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf"; sourceTree = "<group>"; };
+		27B06D149DFB4C9DA4930485 /* Mark Simonson - Proxima Nova Thin-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Thin-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Thin-webfont.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* edifySummer2018-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "edifySummer2018-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* edifySummer2018-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "edifySummer2018-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		387B558AF96F479AB0389A00 /* Mark Simonson - Proxima Nova Alt Regular-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Alt Regular-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf"; sourceTree = "<group>"; };
+		4C830637D6E44F3FAF7F8C4C /* libRNSVG.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSVG.a; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7E96AC0FA2124818B3348C17 /* Mark Simonson - Proxima Nova Alt Black-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Alt Black-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Black-webfont.ttf"; sourceTree = "<group>"; };
+		83026B9C70A840D3A5335CBF /* Mark Simonson - Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Alt Light.otf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Light.otf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8654D7685AB444AFBC11F3A4 /* RNSVG.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSVG.xcodeproj; path = "../node_modules/react-native-svg/ios/RNSVG.xcodeproj"; sourceTree = "<group>"; };
+		916AFA1777964E52B33EC92D /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooBhaina-Regular.ttf"; path = "../js/assets/fonts/BalooBhaina-Regular.ttf"; sourceTree = "<group>"; };
+		92DE3DFD3B614ADBB4CEDD48 /* Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		B41D5CB567C149D5A3339C16 /* BalooBhai-Regular.ttf */ = {isa = PBXFileReference; name = "BalooBhai-Regular.ttf"; path = "../js/assets/fonts/BalooBhai-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		916AFA1777964E52B33EC92D /* BalooBhaina-Regular.ttf */ = {isa = PBXFileReference; name = "BalooBhaina-Regular.ttf"; path = "../js/assets/fonts/BalooBhaina-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7E96AC0FA2124818B3348C17 /* Mark Simonson - Proxima Nova Alt Black-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Alt Black-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Black-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B4D057D1A9B0458D9300838A /* Mark Simonson - Proxima Nova Alt Bold-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Alt Bold-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Bold-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		92DE3DFD3B614ADBB4CEDD48 /* Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		83026B9C70A840D3A5335CBF /* Mark Simonson - Proxima Nova Alt Light.otf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Alt Light.otf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		387B558AF96F479AB0389A00 /* Mark Simonson - Proxima Nova Alt Regular-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Alt Regular-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Regular-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1931224865C84924BF90D46A /* Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FE48BD2D5AE7474A85A144D6 /* Mark Simonson - Proxima Nova Semibold-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Semibold-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Semibold-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		27B06D149DFB4C9DA4930485 /* Mark Simonson - Proxima Nova Thin-webfont.ttf */ = {isa = PBXFileReference; name = "Mark Simonson - Proxima Nova Thin-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Thin-webfont.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B41D5CB567C149D5A3339C16 /* BalooBhai-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "BalooBhai-Regular.ttf"; path = "../js/assets/fonts/BalooBhai-Regular.ttf"; sourceTree = "<group>"; };
+		B4D057D1A9B0458D9300838A /* Mark Simonson - Proxima Nova Alt Bold-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Alt Bold-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Alt Bold-webfont.ttf"; sourceTree = "<group>"; };
+		D29ADA3665B04BE7B99E058E /* libRNSVG-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNSVG-tvOS.a"; sourceTree = "<group>"; };
+		FE48BD2D5AE7474A85A144D6 /* Mark Simonson - Proxima Nova Semibold-webfont.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mark Simonson - Proxima Nova Semibold-webfont.ttf"; path = "../js/assets/fonts/Mark Simonson - Proxima Nova Semibold-webfont.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +410,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				97243F8CBB3C499B80A59257 /* libRNSVG.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +426,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				87027E2F42C749BAAC898484 /* libRNSVG-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +583,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		813A29CB2140809A00683945 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				4C830637D6E44F3FAF7F8C4C /* libRNSVG.a */,
+				D29ADA3665B04BE7B99E058E /* libRNSVG-tvOS.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		813A29CC2140809C00683945 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				813A29F62140809C00683945 /* libRNSVG.a */,
+				813A29F82140809C00683945 /* libRNSVG-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +616,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				8654D7685AB444AFBC11F3A4 /* RNSVG.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -598,6 +639,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8FF10AA9AD7F4961991CDA99 /* Resources */,
+				813A29CB2140809A00683945 /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -615,17 +657,8 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADBDB9201DFEBF0600ED6528 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
-				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8FF10AA9AD7F4961991CDA99 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				B41D5CB567C149D5A3339C16 /* BalooBhai-Regular.ttf */,
 				916AFA1777964E52B33EC92D /* BalooBhaina-Regular.ttf */,
@@ -640,7 +673,15 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
+		};
+		ADBDB9201DFEBF0600ED6528 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
+				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -800,6 +841,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 813A29CC2140809C00683945 /* Products */;
+					ProjectRef = 8654D7685AB444AFBC11F3A4 /* RNSVG.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1058,6 +1103,20 @@
 			remoteRef = 78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		813A29F62140809C00683945 /* libRNSVG.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSVG.a;
+			remoteRef = 813A29F52140809C00683945 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		813A29F82140809C00683945 /* libRNSVG-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNSVG-tvOS.a";
+			remoteRef = 813A29F72140809C00683945 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		832341B51AAA6A8300B99B32 /* libRCTText.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1220,9 +1279,18 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = edifySummer2018Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1237,9 +1305,18 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = edifySummer2018Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1255,6 +1332,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = edifySummer2018/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1272,6 +1353,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = edifySummer2018/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1296,8 +1381,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = "edifySummer2018-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1322,8 +1416,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = "edifySummer2018-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1347,8 +1450,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = "edifySummer2018-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1372,8 +1484,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
+				);
 				INFOPLIST_FILE = "edifySummer2018-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
