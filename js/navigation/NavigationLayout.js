@@ -6,9 +6,9 @@ import {
 import AccountScreen from '../screens/Account';
 import ProfileScreen from '../screens/Profile';
 import EdifyScreen from '../screens/Edify';
-import { HumanIcon } from '../assets/HumanIcon';
-import { AccountIcon } from '../assets/AccountIcon';
-import { EdifyIcon } from '../assets/EdifyIcon';
+import { HumanIcon } from '../components/Icons/HumanIcon';
+import { AccountIcon } from '../components/Icons/AccountIcon';
+import { EdifyIcon } from '../components/Icons/EdifyIcon';
 import { sharedNavigationOptions } from './config';
 
 const EdifyStack = createStackNavigator(
