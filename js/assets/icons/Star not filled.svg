@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="26px" viewBox="0 0 27 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Star not filled</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Wireframes" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="child-notes" transform="translate(-329.000000, -644.000000)" stroke="#FCBB4F" stroke-width="2">
+            <g id="note-2" transform="translate(-9.000000, 624.000000)">
+                <path d="M351.498923,41.0169592 C347.477641,44.3209711 344.913632,45.5694251 343.806895,44.7623212 C342.700158,43.9552174 343.090754,41.1217702 344.978683,36.2619796 C340.617761,33.4061975 338.64252,31.3443373 339.05296,30.0763991 C339.463401,28.8084608 342.268812,28.3057481 347.469193,28.568261 C348.812437,23.5227537 350.15568,21 351.498923,21 C352.842166,21 354.18541,23.5227537 355.528653,28.568261 C360.719979,28.2777717 363.52539,28.7804844 363.944886,30.0763991 C364.364383,31.3723137 362.389142,33.4341739 358.019163,36.2619796 C359.865696,41.1519592 360.256292,43.9854064 359.190951,44.7623212 C358.125611,45.539236 355.561602,44.290782 351.498923,41.0169592 Z" id="Star-not-filled"></path>
+            </g>
+        </g>
+    </g>
+</svg>
