@@ -3,7 +3,6 @@ import {
   View,
   Text,
   Image,
-  Alert,
   Dimensions,
   TouchableOpacity,
 } from 'react-native';
@@ -40,7 +39,7 @@ const Skip = () => {
     <TouchableOpacity
       style={styles.skipButton}
       title={'Done'}
-      onPress={() => Alert.alert('Skipped')}
+      onPress={() => console.log('skipped')}
     >
       <Text style={styles.skip}>Skip</Text>
     </TouchableOpacity>
