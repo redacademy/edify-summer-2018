@@ -39,9 +39,8 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSAppTransportSecurity</key>
-	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
@@ -52,5 +51,18 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BalooBhai-Regular.ttf</string>
+		<string>BalooBhaina-Regular.ttf</string>
+		<string>Mark Simonson - Proxima Nova Alt Black-webfont.ttf</string>
+		<string>Mark Simonson - Proxima Nova Alt Bold-webfont.ttf</string>
+		<string>Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont.ttf</string>
+		<string>Mark Simonson - Proxima Nova Alt Light.otf</string>
+		<string>Mark Simonson - Proxima Nova Alt Regular-webfont.ttf</string>
+		<string>Mark Simonson - Proxima Nova ScOsf Thin-webfont.ttf</string>
+		<string>Mark Simonson - Proxima Nova Semibold-webfont.ttf</string>
+		<string>Mark Simonson - Proxima Nova Thin-webfont.ttf</string>
+	</array>
 </dict>
 </plist>
