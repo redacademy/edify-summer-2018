@@ -50,7 +50,7 @@ export default createBottomTabNavigator(
   },
   {
     navigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, tintColor }) => {
+      tabBarIcon: ({ tintColor }) => {
         const { routeName } = navigation.state;
         let icon;
         switch (routeName) {
@@ -77,7 +77,7 @@ export default createBottomTabNavigator(
       style: {
         backgroundColor: '#75D2D1',
         borderTopColor: '#75D2D1',
-        height: 64,
+        height: 80,
       },
     },
   },

@@ -5,5 +5,12 @@ export default createStackNavigator(
   {
     NavigationLayout,
   },
-  { headerMode: 'none' },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#000',
+        height: 0,
+      },
+    },
+  },
 );
