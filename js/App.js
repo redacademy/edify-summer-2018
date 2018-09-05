@@ -1,32 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import OnboardingContainer from './screens/Onboarding/index'
+import RootStack from './navigation/RootStackNavigator';
+
 export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-      <OnboardingContainer/>
-      </View>
-    );
+    return <RootStack />;
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    fontFamily: 'BalooBhai-Regular',
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
