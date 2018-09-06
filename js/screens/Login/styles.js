@@ -1,4 +1,3 @@
-//STYLES FOR LOGIN
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -20,7 +19,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logoHeader: {
-    // marginTop: 20,
     transform: [{ translateY: -10 }],
     padding: 0,
     margin: 0,
@@ -39,8 +37,6 @@ const styles = StyleSheet.create({
   loginHelpText: {
     flexDirection: 'row',
     color: 'white',
-
-    // marginTop: 50,
   },
   helpText: {
     fontWeight: '600',

@@ -1,4 +1,3 @@
-// LOGIN PAGE
 import React from 'react';
 import styles from './styles.js';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
