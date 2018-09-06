@@ -1,12 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
+import ProfileCard from '../../components/ProfileCard';
 
-const Profile = props => {
+const Profile = ({ data }) => {
   return (
-    <View>
-      <Text>Profile Screen</Text>
-    </View>
+    <ScrollView style={styles.scrollview}>
+      {data.map((child, index) => (
+        <ProfileCard key={child.id} data={child} colorScheme={index} />
+      ))}
+    </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  scrollview: {
+    flexGrow: 1,
+  },
+});
 
 export default Profile;
