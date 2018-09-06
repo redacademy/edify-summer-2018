@@ -1,6 +1,7 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native';
 import ProfileCard from '../../components/ProfileCard';
+import styles from './styles';
 
 const Profile = ({ data }) => {
   return (
@@ -11,11 +12,5 @@ const Profile = ({ data }) => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollview: {
-    flexGrow: 1,
-  },
-});
 
 export default Profile;
