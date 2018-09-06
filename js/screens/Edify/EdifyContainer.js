@@ -6,6 +6,6 @@ export default class EdifyContainer extends Component {
     title: 'Information',
   };
   render() {
-    return <Edify />;
+    return <Edify navigation={this.props.navigation} />;
   }
 }
