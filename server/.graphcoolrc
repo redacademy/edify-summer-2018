@@ -1,0 +1,3 @@
+targets:
+  edify: shared-us-west-2/cjlqsrms353kb01785b3egmho
+  default: edify
