@@ -1,4 +1,5 @@
 import { StyleSheet, Dimensions } from 'react-native';
+import { colors, typography } from '../../config/styles';
 
 const { width } = Dimensions.get('window');
 
@@ -11,29 +12,29 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   cardOne: {
-    backgroundColor: '#5E5AA0',
+    backgroundColor: colors.purple,
   },
   cardTwo: {
-    backgroundColor: '#5DAFE0',
+    backgroundColor: colors.skyblue,
   },
   avatarContainer: {
     width: width / 2.5,
     height: width / 2.5,
     borderRadius: width,
-    backgroundColor: 'black',
+    backgroundColor: colors.black,
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: 20,
   },
   AvatarOne: {
-    backgroundColor: '#75D2D1',
+    backgroundColor: colors.teal,
   },
   AvatarTwo: {
-    backgroundColor: '#5E5AA0',
+    backgroundColor: colors.purple,
   },
   text: {
     fontSize: 20,
-    fontFamily: 'BalooBhai-Regular',
+    fontFamily: typography.mainFont,
     color: '#fff',
   },
   button: {
@@ -44,16 +45,16 @@ const styles = StyleSheet.create({
     marginVertical: 15,
   },
   buttonOne: {
-    borderColor: '#75D2D1',
-    color: '#75D2D1',
+    borderColor: colors.teal,
+    color: colors.teal,
   },
   buttonTwo: {
-    borderColor: '#5E5AA0',
-    color: '#5E5AA0',
+    borderColor: colors.purple,
+    color: colors.purple,
   },
   buttonText: {
     fontSize: 18,
-    fontFamily: 'BalooBhai-Regular',
+    fontFamily: typography.mainFont,
   },
 });
 

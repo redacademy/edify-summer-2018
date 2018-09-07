@@ -1,14 +1,14 @@
-import React from 'react';
+import { colors, typography } from '../config/styles';
 
 export const sharedNavigationOptions = navigation => ({
   headerBackTile: null,
   headerStyle: {
-    backgroundColor: '#75D2D1',
+    backgroundColor: colors.teal,
     height: 65,
   },
-  headerTintColor: '#FFF',
+  headerTintColor: colors.white,
   headerTitleStyle: {
-    fontFamily: 'BalooBhai-Regular',
+    fontFamily: typography.mainFont,
     fontSize: 40,
   },
 });

@@ -8,11 +8,12 @@ import ProfileScreen from '../screens/Profile';
 import EdifyScreen from '../screens/Edify';
 import ResourcesScreen from '../screens/Resources';
 import LoginScreen from '../screens/Login';
-import onBoardingScreen from '../screens/Onboarding';
+import OnboardingScreen from '../screens/Onboarding';
 import { HumanIcon } from '../components/Icons/HumanIcon';
 import { AccountIcon } from '../components/Icons/AccountIcon';
 import { EdifyIcon } from '../components/Icons/EdifyIcon';
 import { sharedNavigationOptions } from './config';
+import { colors } from '../config/styles';
 
 const EdifyStack = createStackNavigator(
   {
@@ -51,7 +52,7 @@ export const loginStack = createStackNavigator(
   {
     navigationOptions: {
       headerStyle: {
-        backgroundColor: '#000',
+        backgroundColor: colors.black,
         height: 0,
       },
     },
@@ -65,6 +66,7 @@ const NavigationLayout = createBottomTabNavigator(
     Edify: EdifyStack,
   },
   {
+    modeModal: true,
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ tintColor }) => {
         const { routeName } = navigation.state;
@@ -87,12 +89,12 @@ const NavigationLayout = createBottomTabNavigator(
       },
     }),
     tabBarOptions: {
-      activeTintColor: '#35377B',
-      inactiveTintColor: '#FFFFFF',
+      activeTintColor: colors.purple,
+      inactiveTintColor: colors.white,
       showLabel: false,
       style: {
-        backgroundColor: '#75D2D1',
-        borderTopColor: '#75D2D1',
+        backgroundColor: colors.teal,
+        borderTopColor: colors.teal,
         height: 80,
       },
     },
@@ -103,7 +105,7 @@ export default createStackNavigator(
   {
     NavigationLayout,
     onBoarding: {
-      screen: onBoardingScreen,
+      screen: OnboardingScreen,
     },
   },
   {

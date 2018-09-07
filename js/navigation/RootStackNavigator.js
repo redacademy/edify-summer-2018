@@ -1,5 +1,6 @@
 import { createSwitchNavigator } from 'react-navigation';
 import NavigationLayout, { loginStack } from './NavigationLayout';
+import { colors } from '../config/styles';
 
 export default createSwitchNavigator(
   {
@@ -10,7 +11,7 @@ export default createSwitchNavigator(
     initialRouteName: 'loginStack',
     navigationOptions: {
       headerStyle: {
-        backgroundColor: '#000',
+        backgroundColor: colors.black,
         height: 0,
       },
     },
