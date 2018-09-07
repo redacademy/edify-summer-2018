@@ -26,6 +26,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textDecorationLine: 'underline',
   },
+  image: {
+    height: 219,
+    width: 219,
+  },
+  circle:{
+    width: 18,
+    height: 18,
+    marginHorizontal: 3,
+    backgroundColor,
+    borderRadius: 9,
+  }
 });
 
 export default styles;

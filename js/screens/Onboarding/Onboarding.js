@@ -8,17 +8,7 @@ const Circle = ({ isLight, selected }) => {
   if (isLight) {
     backgroundColor = selected ? '#35367B' : '#D8D8D8';
   }
-  return (
-    <View
-      style={{
-        width: 18,
-        height: 18,
-        marginHorizontal: 3,
-        backgroundColor,
-        borderRadius: 9,
-      }}
-    />
-  );
+  return <View style={style.circle} />;
 };
 
 const Title = props => {
@@ -65,7 +55,7 @@ const OnboardingPage = () => {
           backgroundColor: '#76D2D1',
           image: (
             <Image
-              style={{ height: 219, width: 219 }}
+              style={styles.image}
               source={require('../../assets/login/tutorial.png')}
             />
           ),
@@ -77,7 +67,7 @@ const OnboardingPage = () => {
           backgroundColor: '#76D2D1',
           image: (
             <Image
-              style={{ height: 219, width: 219 }}
+              style={styles.image}
               source={require('../../assets/login/fox.png')}
             />
           ),
@@ -88,7 +78,7 @@ const OnboardingPage = () => {
           backgroundColor: '#76D2D1',
           image: (
             <Image
-              style={{ height: 219, width: 219 }}
+              style={styles.image}
               source={require('../../assets/login/provider.png')}
             />
           ),
@@ -100,7 +90,7 @@ const OnboardingPage = () => {
           backgroundColor: '#76D2D1',
           image: (
             <Image
-              style={{ height: 219, width: 219 }}
+              style={styles.image}
               source={require('../../assets/login/onboarding.png')}
             />
           ),
