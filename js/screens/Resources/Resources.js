@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import styles from './styles';
-import Resource from './../../components/Resource/Resource';
+import Resource from './../../components/Resource';
 
 const Resources = ({ resources, navigation }) => {
   return (
