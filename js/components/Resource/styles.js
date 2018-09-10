@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { colors, typography } from '../../config/styles';
 
 const styles = StyleSheet.create({
   resourceItem: {
@@ -9,10 +10,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   resourceText: {
-    color: '#3b2984',
+    color: colors.purple,
     fontSize: 20,
     maxWidth: '80%',
-    fontFamily: 'Proxima Nova Alt',
+    fontFamily: typography.secFont,
   },
   externalIcon: {
     height: 30,

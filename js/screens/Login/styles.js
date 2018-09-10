@@ -1,56 +1,73 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+import { colors, typography } from '../../config/styles';
+
+const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#75D2D1',
-    minHeight: '100%',
-    padding: 40,
+  root: {
+    backgroundColor: colors.teal,
+    flexGrow: 1,
+    alignItems: 'center',
     justifyContent: 'center',
+  },
+  container: {
+    flex: 0.8,
+    justifyContent: 'center',
+    width,
+    padding: 40,
   },
   edifyLogo: {
-    height: 91,
-    width: 101,
-    marginRight: 10,
-    marginBottom: 30,
+    height: undefined,
+    width: undefined,
+    flex: 0.9,
   },
-  loginLogo: {
+  formContainer: {
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  logoContainer: {
     flexDirection: 'row',
-    alignContent: 'flex-end',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+  },
+  logoTextContainer: {
+    position: 'relative',
   },
   logoHeader: {
-    transform: [{ translateY: -10 }],
-    padding: 0,
-    margin: 0,
     fontSize: 70,
     fontWeight: '600',
-    fontFamily: 'BalooBhai-Regular',
+    fontFamily: typography.mainFont,
   },
-  subHeader: {
-    transform: [{ translateY: -45 }],
-    fontFamily: 'Proxima Nova Alt',
+  logoSubHeader: {
+    fontFamily: typography.secFont,
+    position: 'absolute',
+    bottom: 16,
+    left: 2,
   },
   logoText: {
-    color: 'white',
+    color: colors.white,
     fontSize: 18,
   },
   loginHelpText: {
     flexDirection: 'row',
-    color: 'white',
+    color: colors.white,
+    width,
   },
   helpText: {
     fontWeight: '600',
-    color: 'white',
+    color: colors.white,
     fontSize: 20,
-    fontFamily: 'Proxima Nova Alt',
+    fontFamily: typography.secFont,
     textDecorationLine: 'underline',
   },
   forgetText: {
-    color: 'white',
+    color: colors.white,
     fontSize: 20,
   },
+  inputContainer: {
+    marginBottom: 20,
+  },
   loginButton: {
-    color: 'white',
+    color: colors.white,
     textAlign: 'center',
     padding: 10,
     fontWeight: '600',
@@ -58,18 +75,18 @@ const styles = StyleSheet.create({
   },
   loginButtonContainer: {
     borderRadius: 10,
-    backgroundColor: '#3B2984',
-    marginTop: 50,
-    marginBottom: 50,
+    marginTop: 20,
+    marginBottom: 20,
+    backgroundColor: colors.purple,
   },
   loginField: {
-    backgroundColor: 'white',
+    backgroundColor: colors.white,
     padding: 10,
     marginTop: 10,
     marginBottom: 10,
     fontSize: 20,
     borderRadius: 10,
-    fontFamily: 'Proxima Nova Alt',
+    fontFamily: typography.secFont,
   },
 });
 

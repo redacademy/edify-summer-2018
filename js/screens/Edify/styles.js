@@ -1,23 +1,21 @@
 import { StyleSheet } from 'react-native';
+import { colors, typography } from '../../config/styles';
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: 30,
-    paddingRight: 30,
-    backgroundColor: 'white',
-    minHeight: '100%',
+    backgroundColor: colors.white,
+    flexGrow: 1,
+    padding: 15,
   },
   divider: {
-    backgroundColor: '#3b2984',
-    width: '100%',
-    height: 1,
+    backgroundColor: colors.purple,
+    height: 2,
   },
   edifyText: {
-    color: '#3b2984',
+    color: colors.purple,
     fontSize: 24,
-    marginTop: 30,
-    marginBottom: 30,
-    fontFamily: 'Proxima Nova Alt',
+    marginVertical: 30,
+    fontFamily: typography.secFont,
   },
 });
 

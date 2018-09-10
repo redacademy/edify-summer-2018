@@ -1,42 +1,45 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+import { colors, typography } from '../../config/styles';
+
+const { width } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
+  root: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
   title: {
-    color: 'white',
+    color: colors.white,
     fontSize: 24,
-    paddingBottom: 25,
-    flex: 0.3,
-    fontFamily: 'Proxima Nova Alt',
-    paddingHorizontal: 80,
+    fontFamily: typography.secFont,
     textAlign: 'center',
     fontWeight: '400',
   },
   subTitle: {
-    color: 'white',
+    color: colors.white,
     fontSize: 16,
-    flex: 1.3,
-    fontFamily: 'Proxima Nova Alt',
+    paddingVertical: 20,
+    fontFamily: typography.secFont,
   },
   skipButton: {
     justifyContent: 'center',
     alignSelf: 'center',
-    paddingLeft: 30,
   },
   skip: {
-    color: 'white',
+    color: colors.white,
     fontSize: 20,
     textDecorationLine: 'underline',
   },
   image: {
-    height: 219,
-    width: 219,
+    height: width / 1.5,
+    width: width / 1.5,
   },
-  // circle:{
-  //   width: 18,
-  //   height: 18,
-  //   marginHorizontal: 3,
-  //   backgroundColor,
-  //   borderRadius: 9,
-  // }
+  circle: {
+    width: 18,
+    height: 18,
+    marginHorizontal: 3,
+    borderRadius: 9,
+  },
 });
 
 export default styles;
