@@ -11,13 +11,14 @@ import ResourcesScreen from '../screens/Resources';
 import LoginScreen from '../screens/Login';
 import LearningCurriculumScreen from '../screens/LearningCurriculum';
 import OnboardingScreen from '../screens/Onboarding';
+import CurriculumScreen from '../screens/Curriculum';
+import ContactScreen from '../screens/Contact';
+import ChildInfoScreen from '../screens/ChildInfo';
 import { HumanIcon } from '../components/Icons/HumanIcon';
 import { AccountIcon } from '../components/Icons/AccountIcon';
 import { EdifyIcon } from '../components/Icons/EdifyIcon';
 import { sharedNavigationOptions } from './config';
 import { colors } from '../config/styles';
-import CurriculumScreen from '../screens/Curriculum';
-import ContactScreen from '../screens/Contact';
 import ActivityScreen from '../screens/Activity';
 
 const EdifyStack = createStackNavigator(
@@ -49,6 +50,7 @@ const ProfileStack = createStackNavigator(
   {
     Profile: ProfileScreen,
     ChildProfile: ChildProfileScreen,
+    ChildInfo: ChildInfoScreen,
   },
   {
     navigationOptions: ({ navigation }) => ({
