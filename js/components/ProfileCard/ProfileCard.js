@@ -1,40 +1,50 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { View, Image } from 'react-native';
 import Avatar from '../Avatar';
 import styles from './styles';
+import { colors } from '../../config/styles';
+import PropTypes from 'prop-types';
 
-const ProfileCard = ({ data, colorScheme }) => {
+const ProfileCard = ({ avatar, style, action, title, imageSource }) => {
+  const cardBackground = {
+    backgroundColor: style.cardBackgroundColor,
+  };
+  const avatarBackground = {
+    backgroundColor: style.avatarBackgroundColor,
+  };
   return (
-    <View
-      style={[styles.card, colorScheme % 2 ? styles.cardTwo : styles.cardOne]}
-    >
-      <View
-        style={[
-          styles.avatarContainer,
-          colorScheme % 2 ? styles.AvatarTwo : styles.AvatarOne,
-        ]}
-      >
-        <Avatar avatar={data.avatar} />
+    <View style={[styles.card, cardBackground]}>
+      <View style={[styles.imageContainer, !imageSource && avatarBackground]}>
+        {imageSource ? (
+          <Image source={imageSource} style={styles.image} />
+        ) : (
+          <Avatar avatar={avatar} />
+        )}
       </View>
-      <Text style={styles.text}>{data.grade}</Text>
-      <TouchableOpacity
-        activeOpacity={0.7}
-        style={[
-          styles.button,
-          colorScheme % 2 ? styles.buttonTwo : styles.buttonOne,
-        ]}
-      >
-        <Text
-          style={[
-            styles.buttonText,
-            colorScheme % 2 ? styles.buttonTwo : styles.buttonOne,
-          ]}
-        >
-          View Profile
-        </Text>
-      </TouchableOpacity>
+      {title}
+      {action}
     </View>
   );
+};
+
+ProfileCard.defaultProps = {
+  avatar: 'fox',
+  imageSource: null,
+  style: {
+    avatarBackgroundColor: colors.teal,
+    cardBackgroundColor: colors.white,
+  },
+};
+
+ProfileCard.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  imageSource: PropTypes.number,
+  style: PropTypes.shape({
+    avatarBackgroundColor: PropTypes.string.isRequired,
+    cardBackgroundColor: PropTypes.string.isRequired,
+  }),
+  title: PropTypes.node,
+  action: PropTypes.node,
 };
 
 export default ProfileCard;

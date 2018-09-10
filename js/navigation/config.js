@@ -1,6 +1,6 @@
 import { colors, typography } from '../config/styles';
 
-export const sharedNavigationOptions = navigation => ({
+export const sharedNavigationOptions = () => ({
   headerBackTile: null,
   headerStyle: {
     backgroundColor: colors.teal,

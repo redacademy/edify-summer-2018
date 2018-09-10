@@ -9,6 +9,7 @@ export const colors = {
   red: '#d3594c',
   darkPurple: '#35377b',
   lightPurple: '#5d5ba0',
+  lightGrey: '#E4EAEF',
 };
 
 export const typography = {
