@@ -2,13 +2,24 @@ import React from 'react';
 import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 import styles from './styles';
+import NavigationLayout from '../../navigation/NavigationLayout';
 
 const Circle = ({ isLight, selected }) => {
   let backgroundColor;
   if (isLight) {
     backgroundColor = selected ? '#35367B' : '#D8D8D8';
   }
-  return <View style={style.circle} />;
+  return (
+    <View
+      style={{
+        width: 18,
+        height: 18,
+        marginHorizontal: 3,
+        backgroundColor,
+        borderRadius: 9,
+      }}
+    />
+  );
 };
 
 const Title = props => {
@@ -32,12 +43,16 @@ const Skip = () => {
 
 let deviceWidth = Dimensions.get('window').width;
 
-const OnboardingPage = () => {
+const OnboardingPage = ({ navigation }) => {
   return (
     <Onboarding
       bottomBarHighlight={false}
       showNext={false}
-      showDone={false}
+      showDone={true}
+      onDone={() => {
+        navigation.navigate('Profile');
+      }}
+      bottomBarHighlight={false}
       imageContainerStyles={{
         width: deviceWidth,
         paddingBottom: 40,

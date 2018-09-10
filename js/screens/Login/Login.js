@@ -3,12 +3,12 @@ import styles from './styles.js';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 import { Form, Field } from 'react-final-form';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.loginLogo}>
         <Image
-          source={require('./../../assets/images/edifyLogo.png')}
+          source={require('./../../assets/login/edifyLogo.png')}
           style={styles.edifyLogo}
           resizeMode="contain"
         />
@@ -21,7 +21,7 @@ const Login = () => {
         </View>
       </View>
       <Form
-        onSubmit={values => console.log(values)}
+        onSubmit={() => navigation.navigate('onBoarding')}
         // validate={validate}
         render={({ handleSubmit, pristine, invalid }) => (
           <View>

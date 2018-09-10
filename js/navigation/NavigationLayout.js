@@ -7,6 +7,8 @@ import AccountScreen from '../screens/Account';
 import ProfileScreen from '../screens/Profile';
 import EdifyScreen from '../screens/Edify';
 import ResourcesScreen from '../screens/Resources';
+import LoginScreen from '../screens/Login';
+import onBoardingScreen from '../screens/Onboarding';
 import { HumanIcon } from '../components/Icons/HumanIcon';
 import { AccountIcon } from '../components/Icons/AccountIcon';
 import { EdifyIcon } from '../components/Icons/EdifyIcon';
@@ -44,7 +46,19 @@ const ProfileStack = createStackNavigator(
   },
 );
 
-export default createBottomTabNavigator(
+export const loginStack = createStackNavigator(
+  { Login: LoginScreen },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#000',
+        height: 0,
+      },
+    },
+  },
+);
+
+const NavigationLayout = createBottomTabNavigator(
   {
     Profile: ProfileStack,
     Account: AccountStack,
@@ -82,5 +96,18 @@ export default createBottomTabNavigator(
         height: 80,
       },
     },
+  },
+);
+
+export default createStackNavigator(
+  {
+    NavigationLayout,
+    onBoarding: {
+      screen: onBoardingScreen,
+    },
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
   },
 );

@@ -1,11 +1,13 @@
-import { createStackNavigator } from 'react-navigation';
-import NavigationLayout from './NavigationLayout';
+import { createSwitchNavigator } from 'react-navigation';
+import NavigationLayout, { loginStack } from './NavigationLayout';
 
-export default createStackNavigator(
+export default createSwitchNavigator(
   {
+    loginStack,
     NavigationLayout,
   },
   {
+    initialRouteName: 'loginStack',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#000',

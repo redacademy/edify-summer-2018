@@ -3,6 +3,6 @@ import Login from './Login';
 
 export default class LoginContainer extends Component {
   render() {
-    return <Login />;
+    return <Login navigation={this.props.navigation} />;
   }
 }
