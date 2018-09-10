@@ -1,0 +1,87 @@
+type User @model {
+  id: ID! @isUnique # Required system field: read-only (managed by Graphcool)
+  email: String! @isUnique
+  password: String!
+  phone: String
+  name: String
+  showOnboarding: Boolean @defaultValue(value: "true")
+  child: [Child!]! @relation(name: "ChildOnParent") #CU2
+  note: [Notes!]! @relation(name: "NotesOnUser") #NU2
+  post: [Posts!]! @relation(name: "PostsOnUser") #PU2
+  createdAt: DateTime! # read-only (managed by Graphcool)
+  updatedAt: DateTime! # read-only (managed by Graphcool)
+}
+
+type Child @model {
+  id: ID! @isUnique
+  parent: User! @relation(name: "ChildOnParent") #CU1
+  name: String!
+  avatar: Avatar! @relation(name: "ChildOnAvatar") #CA1
+  notes: [Notes!]! @relation(name: "ChildOnNotes") #CN1
+  grade: String!
+  updates: [Posts!]! @relation(name: "ChildOnPost") #CP1
+}
+
+type Avatar @model {
+  id: ID! @isUnique
+  imageurl: String!
+  child: [Child!]! @relation(name: "ChildOnAvatar") #CA2
+}
+
+type Tags @model {
+  id: ID! @isUnique
+  title: String!
+  description: String!
+  post: Posts @relation(name: "PostsOnTags") #PT2
+}
+
+type Notes @model {
+  id: ID! @isUnique
+  child: Child! @relation(name: "ChildOnNotes") #CN2
+  createdAt: DateTime!
+  starred: Boolean! @defaultValue(value: "false")
+  creator: User! @relation(name: "NotesOnUser") #NU1
+  message: String!
+}
+type Posts @model {
+  id: ID! @isUnique
+  createdAt: DateTime!
+  imageurl: String!
+  creator: User! @relation(name: "PostsOnUser") #PU1
+  tag: [Tags!]! @relation(name: "PostsOnTags") #PT1
+  mood: Mood! @relation(name: "PostsOnMood") #PM1
+  description: String
+  comments: String
+  child: Child! @relation(name: "ChildOnPost") #CP2
+}
+type Mood @model {
+  id: ID! @isUnique
+  imageurl: String!
+  description: String!
+  post: [Posts!]! @relation(name: "PostsOnMood") #PM2
+}
+type GradeLevel @model {
+  id: ID! @isUnique
+  gradeLevelName: String!
+  activity: [Activity!]! @relation(name: "ActivityOnGradeLevel") #AG2
+}
+type Subject @model {
+  id: ID! @isUnique
+  title: String!
+  activity: [Activity!]! @relation(name: "ActivityOnSubject")
+}
+
+type Activity @model {
+  id: ID! @isUnique
+  title: String!
+  description: String!
+  procedures: String
+  gradeLevel: GradeLevel! @relation(name: "ActivityOnGradeLevel") #AG1
+  subject: Subject! @relation(name: "ActivityOnSubject") #AS1
+}
+
+type Resource @model {
+  id: ID! @isUnique
+  title: String!
+  link: String!
+}

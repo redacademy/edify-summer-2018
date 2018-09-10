@@ -1,0 +1,3 @@
+targets:
+  Edify: shared-us-west-2/cjlu70ygj1jao01652395lvkj
+  default: Edify
