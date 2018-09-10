@@ -7,14 +7,20 @@
     "test": "jest"
   },
   "dependencies": {
+    "apollo-boost": "^0.1.15",
     "final-form": "^4.10.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.9.2",
+    "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "16.4.1",
+    "react-apollo": "^2.1.11",
     "react-final-form": "^3.6.5",
     "react-native": "0.56.0",
     "react-native-onboarding-swiper": "^0.7.1",
     "react-native-svg": "^6.5.2",
-    "react-navigation": "^2.12.1"
+    "react-navigation": "^2.12.1",
+    "realm": "^2.15.3"
   },
   "devDependencies": {
     "babel-jest": "23.4.2",
