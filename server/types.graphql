@@ -85,7 +85,3 @@ type Resource @model {
   title: String!
   link: String!
 }
-
-type Test @model {
-  id: ID! @isUnique
-}

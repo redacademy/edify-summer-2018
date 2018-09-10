@@ -21,11 +21,6 @@ functions:
     handler:
       code: src/email-password/loggedInUser.ts
 
-  hello:
-    handler:
-      code: src/hello.js
-    type: resolver
-    schema: src/hello.graphql
 
 permissions:
   - operation: '*'
