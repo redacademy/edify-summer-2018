@@ -1,14 +1,16 @@
 import { createSwitchNavigator } from 'react-navigation';
 import NavigationLayout, { loginStack } from './NavigationLayout';
+import AuthLoadingScreen from './../screens/AuthLoading';
 import { colors } from '../config/styles';
 
 export default createSwitchNavigator(
   {
+    AuthLoading: AuthLoadingScreen,
     loginStack,
     NavigationLayout,
   },
   {
-    initialRouteName: 'loginStack',
+    initialRouteName: 'AuthLoading',
     navigationOptions: {
       headerStyle: {
         backgroundColor: colors.black,

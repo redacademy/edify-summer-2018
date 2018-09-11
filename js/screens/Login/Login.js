@@ -3,7 +3,8 @@ import styles from './styles.js';
 import { View, Text, Image, TouchableOpacity, TextInput } from 'react-native';
 import { Form, Field } from 'react-final-form';
 
-const Login = ({ navigation }) => {
+//TODO: Validation and error feedback will be done later.  Persisting user required for data loading
+const Login = ({ navigation, signIn, user }) => {
   return (
     <View style={styles.root}>
       <View style={styles.container}>
@@ -23,7 +24,20 @@ const Login = ({ navigation }) => {
         </View>
         <View style={styles.formContainer}>
           <Form
-            onSubmit={() => navigation.navigate('onBoarding')}
+            onSubmit={values =>
+              signIn({
+                variables: { email: values.email, password: values.password },
+              }).then(
+                res => {
+                  user.addUser(
+                    res.data.authenticateUser.id,
+                    res.data.authenticateUser.token,
+                  );
+                  navigation.navigate('onBoarding');
+                },
+                err => console.log(err),
+              )
+            }
             // validate={validate}
             render={({ handleSubmit, pristine, invalid }) => (
               <Fragment>
@@ -67,6 +81,7 @@ const Login = ({ navigation }) => {
             )}
           />
         </View>
+
         <View style={styles.helpContainer}>
           <View style={styles.loginHelpText}>
             <Text style={styles.forgetText}>Forget Password?</Text>
