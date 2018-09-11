@@ -15,12 +15,14 @@ import { EdifyIcon } from '../components/Icons/EdifyIcon';
 import { sharedNavigationOptions } from './config';
 import { colors } from '../config/styles';
 import CurriculumScreen from '../screens/Curriculum';
+import ContactScreen from '../screens/Contact';
 
 const EdifyStack = createStackNavigator(
   {
     Edify: EdifyScreen,
     Resources: ResourcesScreen,
     Curriculum: CurriculumScreen,
+    Contact: ContactScreen,
   },
   {
     navigationOptions: ({ navigation }) => ({
