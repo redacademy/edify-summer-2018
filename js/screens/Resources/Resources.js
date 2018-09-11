@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import styles from './styles';
 import Resource from './../../components/Resource';
+import PropTypes from 'prop-types';
 
 const Resources = ({ resources, navigation }) => {
   return (
@@ -11,6 +12,16 @@ const Resources = ({ resources, navigation }) => {
       ))}
     </View>
   );
+};
+
+Resources.propTypes = {
+  resources: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      link: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default Resources;
