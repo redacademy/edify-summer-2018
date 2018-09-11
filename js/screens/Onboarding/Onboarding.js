@@ -3,6 +3,7 @@ import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 import styles from './styles';
 import { colors } from '../../config/styles';
+import PropTypes from 'prop-types';
 
 const Circle = ({ isLight, selected }) => {
   const circleStyle = { ...styles.circle };
@@ -110,6 +111,10 @@ const OnboardingPage = ({ navigation }) => {
       />
     </View>
   );
+};
+
+OnboardingPage.propTypes = {
+  navigation: PropTypes.object.isRequired,
 };
 
 export default OnboardingPage;
