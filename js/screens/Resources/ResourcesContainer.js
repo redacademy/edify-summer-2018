@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Resources from './Resources.js';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import {Text} from 'react-native'
-
+import { Text } from 'react-native';
 
 export default class ResourcesContainer extends Component {
   static navigationOptions = {
@@ -22,11 +21,14 @@ export default class ResourcesContainer extends Component {
           }
         `}
       >
-        {({ loading, error, data }) => {
-          if (loading) return <Text>Loading</Text>; //Proper Loading screen and error will be aded in another sprint 
-          if (error) return <Text>Error</Text>
+        {({ loading, error, data: { allResources } }) => {
+          if (loading) return <Text>Loading</Text>; //Proper Loading screen and error will be aded in another sprint
+          if (error) return <Text>Error</Text>;
           return (
-            <Resources resources={data} navigation={this.props.navigation} />
+            <Resources
+              resources={allResources}
+              navigation={this.props.navigation}
+            />
           );
         }}
       </Query>
