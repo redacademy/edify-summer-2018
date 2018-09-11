@@ -6,10 +6,6 @@ import {Text} from 'react-native'
 
 
 export default class ResourcesContainer extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   static navigationOptions = {
     title: 'Resources',
   };
