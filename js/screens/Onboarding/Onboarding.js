@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native';
 import Onboarding from 'react-native-onboarding-swiper';
 import styles from './styles';
-import NavigationLayout from '../../navigation/NavigationLayout';
 import { colors } from '../../config/styles';
 
 const Circle = ({ isLight, selected }) => {

@@ -1,8 +1,8 @@
 import { StyleSheet, Dimensions } from 'react-native';
-
+import { colors, typography } from '../../config/styles';
 const { width, height } = Dimensions.get('window');
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     justifyContent: 'center',
@@ -13,8 +13,8 @@ const styles = {
   },
   text: {
     fontSize: 20,
-    color: '#ffffff',
-    fontFamily: 'BalooBhai-Regular',
+    color: colors.white,
+    fontFamily: typography.mainFont,
   },
   header: {
     fontSize: 26,
@@ -23,7 +23,7 @@ const styles = {
     width: width / 2,
     alignSelf: 'center',
     textAlign: 'center',
-    fontFamily: 'Proxima Nova Alt',
+    fontFamily: typography.secFont,
   },
   buttons: {
     alignItems: 'center',
@@ -32,6 +32,6 @@ const styles = {
     padding: 15,
     marginBottom: 15,
   },
-};
+});
 
 export default styles;
