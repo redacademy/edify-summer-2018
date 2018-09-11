@@ -1,8 +1,8 @@
-import React from 'react';
-import { ActivityIndicator, StatusBar, View } from 'react-native';
+import React, { Fragment } from 'react';
+import { ActivityIndicator, StatusBar } from 'react-native';
 import { getUser } from './../../config/models.js';
 
-class AuthLoadingScreen extends React.Component {
+class AuthLoading extends React.Component {
   constructor(props) {
     super(props);
     this._checkLoggedIn();
@@ -20,12 +20,12 @@ class AuthLoadingScreen extends React.Component {
   //TODO: Splash screen will be inserted when designers get back to us.
   render() {
     return (
-      <View>
+      <Fragment>
         <ActivityIndicator />
         <StatusBar barStyle="default" />
-      </View>
+      </Fragment>
     );
   }
 }
 
-export default AuthLoadingScreen;
+export default AuthLoading;
