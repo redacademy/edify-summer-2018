@@ -9,7 +9,7 @@ const Login = ({ navigation }) => {
       <View style={styles.container}>
         <View style={styles.logoContainer}>
           <Image
-            source={require('./../../assets/login/edifyLogo.png')}
+            source={require('./../../assets/images/login/edifyLogo.png')}
             style={styles.edifyLogo}
             resizeMode="contain"
           />
