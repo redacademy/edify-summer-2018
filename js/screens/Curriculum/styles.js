@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     justifyContent: 'center',
     padding: 15,
+    backgroundColor: colors.white,
   },
   view: {
     flexGrow: 1,

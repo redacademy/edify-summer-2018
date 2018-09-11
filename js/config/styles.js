@@ -4,6 +4,11 @@ export const colors = {
   skyblue: '#5DAFE0',
   black: '#000',
   white: '#FFF',
+  lightBlue: '#5db0e0',
+  yellow: '#f3bc63',
+  red: '#d3594c',
+  darkPurple: '#35377b',
+  lightPurple: '#5d5ba0',
 };
 
 export const typography = {
