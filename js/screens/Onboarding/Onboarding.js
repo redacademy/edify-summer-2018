@@ -66,7 +66,7 @@ const OnboardingPage = ({ navigation }) => {
             image: (
               <Image
                 style={styles.image}
-                source={require('../../assets/login/tutorial.png')}
+                source={require('../../assets/images/onboarding/group.png')}
               />
             ),
             title: <Title title="View updates on your child" />,
@@ -77,7 +77,7 @@ const OnboardingPage = ({ navigation }) => {
             image: (
               <Image
                 style={styles.image}
-                source={require('../../assets/login/fox.png')}
+                source={require('../../assets/images/onboarding/avatar.png')}
               />
             ),
             title: <Title title="Set up a personalized profile" />,
@@ -88,7 +88,7 @@ const OnboardingPage = ({ navigation }) => {
             image: (
               <Image
                 style={styles.image}
-                source={require('../../assets/login/provider.png')}
+                source={require('../../assets/images/onboarding/provider.png')}
               />
             ),
 
@@ -100,7 +100,7 @@ const OnboardingPage = ({ navigation }) => {
             image: (
               <Image
                 style={styles.image}
-                source={require('../../assets/login/onboarding.png')}
+                source={require('../../assets/images/onboarding/onboarding-logo.png')}
               />
             ),
 
