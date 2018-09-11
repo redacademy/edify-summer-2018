@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, TouchableOpacity, View, Image, Linking } from 'react-native';
 import styles from './styles';
 import { withNavigation } from 'react-navigation';
+import PropTypes from 'prop-types';
 
 class Resource extends Component {
   constructor(props) {
@@ -36,5 +37,13 @@ class Resource extends Component {
     );
   }
 }
+
+Resource.propTypes = {
+  resource: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+  }).isRequired,
+  navigation: PropTypes.object.isRequired,
+};
 
 export default withNavigation(Resource);
