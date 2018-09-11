@@ -1,17 +1,18 @@
 import React, { Component, Fragment } from 'react';
 import { StatusBar } from 'react-native';
 import RootStack from './navigation/RootStackNavigator';
-
 import { ApolloProvider } from 'react-apollo';
-import client from './../api/api';
-
+import client from './config/api.js';
+import { UserProvider } from './context/UserContext';
 export default class App extends Component {
   render() {
     return (
       <ApolloProvider client={client}>
         <Fragment>
-          <StatusBar barStyle="light-content" />
-          <RootStack />
+          <UserProvider>
+            <StatusBar barStyle="light-content" />
+            <RootStack />
+          </UserProvider>
         </Fragment>
       </ApolloProvider>
     );
