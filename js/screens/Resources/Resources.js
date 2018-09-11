@@ -7,9 +7,11 @@ import PropTypes from 'prop-types';
 const Resources = ({ resources, navigation }) => {
   return (
     <View style={styles.container}>
-      {resources.map((resource, index) => (
-        <Resource resource={resource} key={index} navigation={navigation} />
-      ))}
+      {resources.allResources.map((resource, index) => {
+        return (
+          <Resource resource={resource} key={index} navigation={navigation} />
+        );
+      })}
     </View>
   );
 };
