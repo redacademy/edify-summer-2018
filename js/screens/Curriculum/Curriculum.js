@@ -1,48 +1,53 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import styles from './styles';
+import { colors } from './../../config/styles';
+import PropTypes from 'prop-types';
 
-const Curriculum = props => {
+export const buttonColors = [
+  'lightBlue',
+  'yellow',
+  'red',
+  'darkPurple',
+  'lightPurple',
+];
+
+const Curriculum = ({ navigation, gradeLevels }) => {
   return (
-    <View style= {styles.container}>
-        <ScrollView style= {styles.view}>
+    <View style={styles.container}>
+      <ScrollView style={styles.view}>
+        <Text style={styles.header}>Edify Learning Curriculum</Text>
 
-            <Text style= {styles.header}>Edify Learning Curriculum</Text>
-
-            <TouchableOpacity
-                activeOpacity= {0.1}
-                style= {[styles.buttons, {backgroundColor: '#5db0e0'}]}>
-                <Text style= {styles.text}>K-1</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                activeOpacity= {0.1}
-                style= {[styles.buttons, {backgroundColor: '#f3bc63'}]}>
-                <Text style= {styles.text}>K-2</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                activeOpacity= {0.1}
-                style= {[styles.buttons, {backgroundColor: '#d3594c'}]}>
-                <Text style= {styles.text}>Grades 1-2</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                activeOpacity= {0.1}
-                style= {[styles.buttons, {backgroundColor: '#35377b'}]}>
-                <Text style= {styles.text}>Grades 3-5</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity
-                activeOpacity= {0.1}
-                style= {[styles.buttons, {backgroundColor: '#5d5ba0'}]}>
-                <Text style= {styles.text}>Grades 6-8</Text>
-            </TouchableOpacity>
-
-        </ScrollView>
+        {gradeLevels.map((grade, index) => (
+          <TouchableOpacity
+            activeOpacity={0.1}
+            style={{
+              ...styles.buttons,
+              backgroundColor: colors[buttonColors[index]],
+            }}
+            onPress={() =>
+              navigation.navigate('Subjects', {
+                gradeId: grade.id,
+              })
+            }
+            key={grade.id}
+          >
+            <Text style={styles.text}>{grade.gradeLevelName}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
     </View>
-
   );
+};
+
+Curriculum.propTypes = {
+  gradeLevels: PropTypes.arrayOf(
+    PropTypes.shape({
+      gradeLevelName: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default Curriculum;
