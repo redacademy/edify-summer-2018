@@ -6,6 +6,6 @@ export default class LearningCurriculumContainer extends Component {
     title: 'Curriculum',
   };
   render() {
-    return <LearningCurriculum />;
+    return <LearningCurriculum navigation={this.props.navigation} />;
   }
 }

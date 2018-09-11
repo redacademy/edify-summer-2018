@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
-const LearningCurriculum = props => {
+const LearningCurriculum = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -56,6 +57,10 @@ const LearningCurriculum = props => {
       </ScrollView>
     </View>
   );
+};
+
+LearningCurriculum.propTypes = {
+  navigation: PropTypes.string.isRequired,
 };
 
 export default LearningCurriculum;

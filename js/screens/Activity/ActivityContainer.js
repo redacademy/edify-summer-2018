@@ -6,6 +6,6 @@ export default class ActivityContainer extends Component {
     title: 'Curriculum',
   };
   render() {
-    return <Activity />;
+    return <Activity navigation={this.props.navigation} />;
   }
 }

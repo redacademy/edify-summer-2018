@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
-const Activity = props => {
+const Activity = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.header}>The Marshmallow Challenge</Text>
@@ -29,6 +30,10 @@ const Activity = props => {
       </View>
     </View>
   );
+};
+
+Activity.propTypes = {
+  navigation: PropTypes.string.isRequired,
 };
 
 export default Activity;
