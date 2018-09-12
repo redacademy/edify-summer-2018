@@ -18,23 +18,29 @@ const Curriculum = ({ navigation, gradeLevels }) => {
       <ScrollView style={styles.view}>
         <Text style={styles.header}>Edify Learning Curriculum</Text>
 
-        {gradeLevels.map((grade, index) => (
-          <TouchableOpacity
-            activeOpacity={0.1}
-            style={{
-              ...styles.buttons,
-              backgroundColor: colors[buttonColors[index]],
-            }}
-            onPress={() =>
-              navigation.navigate('Subjects', {
-                gradeId: grade.id,
-              })
-            }
-            key={grade.id}
-          >
-            <Text style={styles.text}>{grade.gradeLevelName}</Text>
-          </TouchableOpacity>
-        ))}
+        {gradeLevels.map(
+          (grade, index) => (
+            console.log(grade),
+            (
+              <TouchableOpacity
+                activeOpacity={0.1}
+                style={{
+                  ...styles.buttons,
+                  backgroundColor: colors[buttonColors[index]],
+                }}
+                onPress={() =>
+                  navigation.navigate('LearningCurriculum', {
+                    gradeId: grade.id,
+                    gradeLevelName: grade.gradeLevelName,
+                  })
+                }
+                key={grade.id}
+              >
+                <Text style={styles.text}>{grade.gradeLevelName}</Text>
+              </TouchableOpacity>
+            )
+          ),
+        )}
       </ScrollView>
     </View>
   );

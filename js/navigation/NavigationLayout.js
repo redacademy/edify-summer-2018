@@ -9,6 +9,7 @@ import ChildProfileScreen from '../screens/ChildProfile/';
 import EdifyScreen from '../screens/Edify';
 import ResourcesScreen from '../screens/Resources';
 import LoginScreen from '../screens/Login';
+import LearningCurriculumScreen from '../screens/LearningCurriculum';
 import OnboardingScreen from '../screens/Onboarding';
 import { HumanIcon } from '../components/Icons/HumanIcon';
 import { AccountIcon } from '../components/Icons/AccountIcon';
@@ -17,12 +18,15 @@ import { sharedNavigationOptions } from './config';
 import { colors } from '../config/styles';
 import CurriculumScreen from '../screens/Curriculum';
 import ContactScreen from '../screens/Contact';
+import ActivityScreen from '../screens/Activity';
 
 const EdifyStack = createStackNavigator(
   {
     Edify: EdifyScreen,
-    Resources: ResourcesScreen,
     Curriculum: CurriculumScreen,
+    LearningCurriculum: LearningCurriculumScreen,
+    Activity: ActivityScreen,
+    Resources: ResourcesScreen,
     Contact: ContactScreen,
   },
   {
@@ -71,7 +75,9 @@ const NavigationLayout = createBottomTabNavigator(
     Account: AccountStack,
     Edify: EdifyStack,
   },
+
   {
+    //  initialRouteName: 'Edify', //delete this line later
     modeModal: true,
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ tintColor }) => {

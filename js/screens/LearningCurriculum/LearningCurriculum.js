@@ -1,60 +1,58 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import { colors } from '../../config/styles';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  SectionList,
+} from 'react-native';
 import styles from './styles';
 
-const LearningCurriculum = props => {
+const buttonColors = [
+  'lightBlue',
+  'yellow',
+  'red',
+  'darkPurple',
+  'lightPurple',
+];
+
+const LearningCurriculum = ({ navigation, data }) => {
+  const gradeLevelName = navigation.getParam('gradeLevelName');
   return (
-    <View style={styles.container}>
-      <ScrollView>
-        <Text style={styles.header}>K-2 Learning Curriculum</Text>
-
-        <Text style={styles.subject}>Science</Text>
-        <TouchableOpacity
-          activeOpacity={0.1}
-          style={[styles.button, { backgroundColor: '#5D5BA0' }]}
-        >
-          <Text style={styles.activity}>Making Slime</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.subject}>Technology</Text>
-        <TouchableOpacity
-          activeOpacity={0.1}
-          style={[styles.button, { backgroundColor: '#35377B' }]}
-        >
-          <Text style={styles.activity}>Writing</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.subject}>Engineering</Text>
-        <TouchableOpacity
-          activeOpacity={0.1}
-          style={[styles.button, { backgroundColor: '#D3594C' }]}
-        >
-          <Text style={styles.activity}>Marshmallow Challenge</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.subject}>Arts</Text>
-        <TouchableOpacity
-          activeOpacity={0.1}
-          style={[styles.button, { backgroundColor: '#F3BC63' }]}
-        >
-          <Text style={styles.activity}>Finger Painting</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          activeOpacity={0.1}
-          style={[styles.button, { backgroundColor: '#5DB0E0' }]}
-        >
-          <Text style={styles.activity}>Pottery</Text>
-        </TouchableOpacity>
-
-        <Text style={styles.subject}>Math</Text>
-        <TouchableOpacity
-          activeOpacity={0.1}
-          style={[styles.button, { backgroundColor: '#5D5BA0' }]}
-        >
-          <Text style={styles.activity}>Space Math</Text>
-        </TouchableOpacity>
-      </ScrollView>
-    </View>
+    <ScrollView>
+      <Text style={styles.header}> {gradeLevelName} Learning Curriculum</Text>
+      <SectionList
+        renderItem={({ item, index }) =>
+          item.activity.map((activity, index) => {
+            return (
+              <View key={index} style={styles.buttonWrap}>
+                <TouchableOpacity
+                  activeOpacity={0.1}
+                  style={[
+                    styles.button,
+                    { backgroundColor: colors[buttonColors[index]] },
+                  ]}
+                  onPress={() => {
+                    navigation.navigate('Activity', {
+                      activityId: activity.id,
+                    });
+                    console.log('ACTIVITY', activity.id);
+                  }}
+                >
+                  <Text style={styles.buttonText}>{activity.title}</Text>
+                </TouchableOpacity>
+              </View>
+            );
+          })
+        }
+        renderSectionHeader={({ section: { title } }) => (
+          <Text style={styles.subject}> {title}</Text>
+        )}
+        sections={data}
+        keyExtractor={(item, index) => item + index}
+      />
+    </ScrollView>
   );
 };
 
