@@ -11,7 +11,7 @@ export default class AddNote extends Component {
     };
   }
   render() {
-    const { open, close } = this.props;
+    const { open, close, showX } = this.props;
     return (
       <View style={styles.modalContainer}>
         <Modal
@@ -24,12 +24,14 @@ export default class AddNote extends Component {
             <View style={styles.modal}>
               <View style={styles.header}>
                 <Text style={styles.title}>Add Note:</Text>
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  onPress={() => close(false)}
-                >
-                  <Text style={styles.close}>X</Text>
-                </TouchableOpacity>
+                {showX && (
+                  <TouchableOpacity
+                    activeOpacity={0.5}
+                    onPress={() => close(false)}
+                  >
+                    <Text style={styles.close}>X</Text>
+                  </TouchableOpacity>
+                )}
               </View>
               <TextInput
                 {...this.props}

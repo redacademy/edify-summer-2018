@@ -8,6 +8,7 @@ import ChildUpdates from '../../components/ChildUpdates';
 import AddNote from '../../components/NoteList/AddNote';
 import { colors } from '../../config/styles';
 import PropTypes from 'prop-types';
+import TagModal from '../../components/TagModal';
 
 const ChildProfile = ({
   child,
