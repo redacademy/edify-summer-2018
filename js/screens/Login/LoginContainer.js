@@ -9,6 +9,7 @@ const SIGNIN_USER = gql`
     authenticateUser(email: $email, password: $password) {
       id
       token
+      showOnboarding
     }
   }
 `;

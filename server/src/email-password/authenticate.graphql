@@ -1,6 +1,7 @@
 type AuthenticateUserPayload {
   id: ID!
   token: String!
+  showOnboarding: Boolean!
 }
 
 extend type Mutation {
