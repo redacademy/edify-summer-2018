@@ -17,6 +17,7 @@
     "react-apollo": "^2.1.11",
     "react-final-form": "^3.6.5",
     "react-native": "0.56.0",
+    "react-native-blur": "^3.2.2",
     "react-native-onboarding-swiper": "^0.7.1",
     "react-native-svg": "^6.5.2",
     "react-navigation": "^2.12.1",
