@@ -75,7 +75,7 @@ type Activity @model {
   id: ID! @isUnique
   title: String!
   description: String!
-  procedures: String
+  procedures: [String!]!
   gradeLevel: GradeLevel! @relation(name: "ActivityOnGradeLevel") #AG1
   subject: Subject! @relation(name: "ActivityOnSubject") #AS1
 }

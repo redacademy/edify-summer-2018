@@ -35,7 +35,7 @@ const Skip = ({ pressed }) => {
 
 let deviceWidth = Dimensions.get('window').width;
 
-const OnboardingPage = ({ navigation }) => {
+const OnboardingPage = ({ navigation, toggleOnboarding }) => {
   return (
     <View style={styles.root}>
       <Onboarding
@@ -43,6 +43,7 @@ const OnboardingPage = ({ navigation }) => {
         showNext={false}
         showDone={true}
         onDone={() => {
+          toggleOnboarding();
           navigation.navigate('Profile');
         }}
         imageContainerStyles={{
@@ -56,6 +57,7 @@ const OnboardingPage = ({ navigation }) => {
         SkipButtonComponent={() => (
           <Skip
             pressed={() => {
+              toggleOnboarding();
               navigation.navigate('Profile');
             }}
           />

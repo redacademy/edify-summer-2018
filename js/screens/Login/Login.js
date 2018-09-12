@@ -33,7 +33,14 @@ const Login = ({ navigation, signIn, user }) => {
                     res.data.authenticateUser.id,
                     res.data.authenticateUser.token,
                   );
-                  navigation.navigate('onBoarding');
+
+                  res.data.authenticateUser.showOnboarding
+                    ? navigation.navigate('onBoarding', {
+                        userId: res.data.authenticateUser.id,
+                      })
+                    : navigation.navigate('Profile', {
+                        userId: res.data.authenticateUser.id,
+                      });
                 },
                 err => console.log(err),
               )
