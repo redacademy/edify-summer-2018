@@ -5,6 +5,7 @@ import {
 } from 'react-navigation';
 import AccountScreen from '../screens/Account';
 import ProfileScreen from '../screens/Profile';
+import ChildProfileScreen from '../screens/ChildProfile/';
 import EdifyScreen from '../screens/Edify';
 import ResourcesScreen from '../screens/Resources';
 import LoginScreen from '../screens/Login';
@@ -43,6 +44,7 @@ const AccountStack = createStackNavigator(
 const ProfileStack = createStackNavigator(
   {
     Profile: ProfileScreen,
+    ChildProfile: ChildProfileScreen,
   },
   {
     navigationOptions: ({ navigation }) => ({

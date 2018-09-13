@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
+import PropTypes from 'prop-types';
 
 export default class ProfileContainer extends Component {
   constructor(props) {
@@ -33,3 +34,7 @@ export default class ProfileContainer extends Component {
     return <Profile data={this.state.data} />;
   }
 }
+
+ProfileContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
