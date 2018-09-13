@@ -10,6 +10,7 @@ export const colors = {
   darkPurple: '#35377b',
   lightPurple: '#5d5ba0',
   lightGrey: '#E4EAEF',
+  grey: '#4A4A4A',
 };
 
 export const typography = {

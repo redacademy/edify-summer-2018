@@ -1,2 +1,3 @@
-import LearningCurriculum from './LearningCurriculum';
-export default LearningCurriculum;
+import LearningCurriculumContainer from './LearningCurriculumContainer';
+
+export default LearningCurriculumContainer;

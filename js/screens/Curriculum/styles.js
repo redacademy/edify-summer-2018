@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textAlign: 'center',
     fontFamily: typography.secFont,
+    color: colors.grey
   },
   buttons: {
     alignItems: 'center',

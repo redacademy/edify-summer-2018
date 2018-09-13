@@ -1,7 +1,5 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { colors, typography } from '../../config/styles';
-
-const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   container: {
@@ -10,23 +8,27 @@ const styles = StyleSheet.create({
   },
   header: {
     fontFamily: typography.secFont,
-    fontSize: 22,
+    fontSize: 30,
     fontWeight: 'bold',
-    marginBottom: 15,
+    paddingVertical: 15,
     textAlign: 'center',
     alignItems: 'center',
+    color: colors.grey,
   },
   subject: {
-    fontFamily: typography.secFont,
-    fontSize: 18,
+    fontFamily: typography.mainFont,
+    fontSize: 20,
     padding: 10,
+    color: colors.grey,
   },
   activity: {
     fontFamily: typography.mainFont,
-    // color: colors.white,
     fontSize: 18,
     textAlign: 'center',
     alignItems: 'center',
+  },
+  buttonWrap: {
+    paddingHorizontal: 15,
   },
   button: {
     alignItems: 'center',
@@ -34,6 +36,11 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 15,
     marginBottom: 15,
+  },
+  buttonText: {
+    fontSize: 20,
+    color: colors.white,
+    fontFamily: typography.mainFont,
   },
 });
 

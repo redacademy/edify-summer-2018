@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, View, FlatList } from 'react-native';
-import { formatUpdatesData } from '../../lib/formatUpdatesData';
+import { formatUpdatesData } from '../../lib/helpers';
 import styles from './styles';
 import PropTypes from 'prop-types';
 
