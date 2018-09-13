@@ -4,11 +4,11 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Text } from 'react-native';
 import { formatLearningCurriculumData } from './FormatLearningCurriculum';
+import PropTypes from 'prop-types';
 export default class LearningCurriculumContainer extends Component {
   static navigationOptions = {
     title: 'Curriculum',
   };
-
   render() {
     const gradeLevelName = this.props.navigation.getParam('gradeLevelName');
     return (
@@ -47,3 +47,6 @@ export default class LearningCurriculumContainer extends Component {
     );
   }
 }
+LearningCurriculumContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};

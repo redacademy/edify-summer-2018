@@ -8,6 +8,7 @@ import {
   SectionList,
 } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const buttonColors = [
   'lightBlue',
@@ -37,7 +38,6 @@ const LearningCurriculum = ({ navigation, data }) => {
                     navigation.navigate('Activity', {
                       activityId: activity.id,
                     });
-                    console.log('ACTIVITY', activity.id);
                   }}
                 >
                   <Text style={styles.buttonText}>{activity.title}</Text>
@@ -54,6 +54,22 @@ const LearningCurriculum = ({ navigation, data }) => {
       />
     </ScrollView>
   );
+};
+
+LearningCurriculum.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      data: PropTypes.arrayOf(
+        PropTypes.shape({
+          activity: PropTypes.array.isRequired,
+          id: PropTypes.string.isRequired,
+          title: PropTypes.string.isRequired,
+        }),
+      ),
+      title: PropTypes.string.isRequired,
+    }),
+  ),
+  navigation: PropTypes.object.isRequired,
 };
 
 export default LearningCurriculum;

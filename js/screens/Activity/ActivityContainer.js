@@ -9,11 +9,8 @@ export default class ActivityContainer extends Component {
     title: 'Curriculum',
   };
 
-
-
   render() {
     const activityId = this.props.navigation.getParam('activityId');
-    console.log('AcTiViTyId', activityId);
     return (
       <Query
         variables={{ id: activityId }}
@@ -28,7 +25,6 @@ export default class ActivityContainer extends Component {
         `}
       >
         {({ loading, error, data }) => {
-          console.log(data);
           if (loading) return <Text>Loading: </Text>;
           if (error) return <Text>Error: </Text>;
           return <Activity data={data} />;
@@ -39,5 +35,5 @@ export default class ActivityContainer extends Component {
 }
 
 ActivityContainer.propTypes = {
-  navigation: PropTypes.object.isRequired
-}
+  navigation: PropTypes.object.isRequired,
+};

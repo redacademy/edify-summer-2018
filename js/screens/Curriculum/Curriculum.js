@@ -20,7 +20,6 @@ const Curriculum = ({ navigation, gradeLevels }) => {
 
         {gradeLevels.map(
           (grade, index) => (
-            console.log(grade),
             (
               <TouchableOpacity
                 activeOpacity={0.1}
