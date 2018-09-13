@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Modal, TextInput } from 'react-native';
 import styles from './styles';
 import PropTypes from 'prop-types';
+import MessageBox from '../../MessageBox';
 
 export default class AddNote extends Component {
   constructor(props) {
@@ -10,6 +11,9 @@ export default class AddNote extends Component {
       text: '',
     };
   }
+  _updateText = text => {
+    this.setState({ text });
+  };
   render() {
     const { open, close } = this.props;
     return (
@@ -21,28 +25,14 @@ export default class AddNote extends Component {
           onRequestClose={() => close(false)}
         >
           <View style={styles.container}>
-            <View style={styles.modal}>
-              <View style={styles.header}>
-                <Text style={styles.title}>Add Note:</Text>
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  onPress={() => close(false)}
-                >
-                  <Text style={styles.close}>X</Text>
-                </TouchableOpacity>
-              </View>
-              <TextInput
-                {...this.props}
-                multiline={true}
-                onChangeText={text => this.setState({ text })}
-                autoFocus
-                value={this.state.text}
-                style={styles.textInput}
-              />
-              <TouchableOpacity activeOpacity={0.5} style={styles.button}>
-                <Text style={styles.submit}>Submit</Text>
-              </TouchableOpacity>
-            </View>
+            <MessageBox
+              close={close}
+              updateText={text => this._updateText(text)}
+              showCloseIcon
+              value={this.state.text}
+              pressed={() => {}}
+              title="Add Note:"
+            />
           </View>
         </Modal>
       </View>
