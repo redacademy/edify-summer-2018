@@ -3,7 +3,7 @@ import LearningCurriculum from './LearningCurriculum';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Text } from 'react-native';
-import { formatLearningCurriculumData } from './FormatLearningCurriculum';
+import { formatLearningCurriculumData } from '../../lib/FormatLearningCurriculum';
 import PropTypes from 'prop-types';
 export default class LearningCurriculumContainer extends Component {
   static navigationOptions = {
