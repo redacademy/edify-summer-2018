@@ -2,9 +2,12 @@ import { StyleSheet } from 'react-native';
 import { colors, typography } from '../../config/styles';
 
 const styles = StyleSheet.create({
+  scrollView:{
+    backgroundColor: colors.white
+  },
   container: {
     flexGrow: 1,
-    justifyContent: 'center',
+    justifyContent: 'center', 
   },
   header: {
     fontFamily: typography.secFont,

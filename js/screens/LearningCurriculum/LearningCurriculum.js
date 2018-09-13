@@ -21,7 +21,7 @@ const buttonColors = [
 const LearningCurriculum = ({ navigation, data }) => {
   const gradeLevelName = navigation.getParam('gradeLevelName');
   return (
-    <ScrollView>
+    <ScrollView style={styles.scrollView}>
       <Text style={styles.header}> {gradeLevelName} Learning Curriculum</Text>
       <SectionList
         renderItem={({ item, index }) =>

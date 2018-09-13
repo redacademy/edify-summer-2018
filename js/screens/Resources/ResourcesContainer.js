@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Resources from './Resources.js';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import { Text } from 'react-native';
+import LoadingScreen from '../../components/LoadingScreen';
+import QueryError from '../../components/QueryError';
 
 export default class ResourcesContainer extends Component {
   static navigationOptions = {
@@ -22,8 +23,8 @@ export default class ResourcesContainer extends Component {
         `}
       >
         {({ loading, error, data: { allResources } }) => {
-          if (loading) return <Text>Loading</Text>; //Proper Loading screen and error will be aded in another sprint
-          if (error) return <Text>Error</Text>;
+          if (loading) return <LoadingScreen />; //Proper Loading screen and error will be aded in another sprint
+          if (error) return <QueryError />;
           return (
             <Resources
               resources={allResources}

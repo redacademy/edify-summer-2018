@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import LearningCurriculum from './LearningCurriculum';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-import { Text } from 'react-native';
 import { formatLearningCurriculumData } from '../../lib/helpers';
 import PropTypes from 'prop-types';
+import LoadingScreen from '../../components/LoadingScreen';
+import QueryError from '../../components/QueryError';
 export default class LearningCurriculumContainer extends Component {
   static navigationOptions = {
     title: 'Curriculum',
@@ -34,8 +35,8 @@ export default class LearningCurriculumContainer extends Component {
         `}
       >
         {({ loading, error, data }) => {
-          if (loading) return <Text>Loading: </Text>;
-          if (error) return <Text>Error: </Text>;
+          if (loading) return <LoadingScreen />;
+          if (error) return <QueryError />;
           return (
             <LearningCurriculum
               navigation={this.props.navigation}

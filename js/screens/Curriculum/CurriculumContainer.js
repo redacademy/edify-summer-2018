@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
 import Curriculum from './Curriculum';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
+import LoadingScreen from '../../components/LoadingScreen';
+import QueryError from '../../components/QueryError';
 export default class CurriculumContainer extends Component {
   static navigationOptions = {
     title: 'Curriculum',
@@ -20,8 +21,8 @@ export default class CurriculumContainer extends Component {
         `}
       >
         {({ loading, error, data: { allGradeLevels } }) => {
-          if (loading) return <Text>Loading</Text>;
-          if (error) return <Text>{error}</Text>;
+          if (loading) return <LoadingScreen />;
+          if (error) return <QueryError />;
           return (
             <Curriculum
               navigation={this.props.navigation}
