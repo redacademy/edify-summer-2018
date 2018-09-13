@@ -18,13 +18,15 @@ export default class LoginContainer extends Component {
   render() {
     return (
       <Mutation mutation={SIGNIN_USER}>
-        {(authenticateUser, { data }) => (
+        {(authenticateUser, { data, loading, error }) => (
           <UserContext.Consumer>
             {values => {
               return (
                 <Login
                   navigation={this.props.navigation}
                   signIn={authenticateUser}
+                  loginLoading={loading}
+                  loginError={error}
                   user={values}
                 />
               );

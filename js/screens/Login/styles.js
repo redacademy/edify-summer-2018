@@ -78,6 +78,8 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     backgroundColor: colors.purple,
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   loginField: {
     backgroundColor: colors.white,
@@ -87,6 +89,27 @@ const styles = StyleSheet.create({
     fontSize: 20,
     borderRadius: 10,
     fontFamily: typography.secFont,
+  },
+  loginIndicator: {
+    padding: 12,
+  },
+  fieldError: {
+    position: 'absolute',
+    bottom: 8,
+    right: 5,
+    color: colors.darkPurple,
+  },
+  fieldContainer: {
+    position: 'relative',
+  },
+  inactiveLogin: {
+    backgroundColor: colors.red,
+  },
+  errorText: {
+    color: colors.white,
+    fontSize: 20,
+    position: 'absolute',
+    top: -10,
   },
 });
 
