@@ -18,6 +18,10 @@ const styles = StyleSheet.create({
   divider: {
     width: 5,
   },
+  image: {
+    height: 150,
+    width: 150,
+  },
 });
 
 export default styles;

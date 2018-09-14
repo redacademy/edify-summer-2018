@@ -15,7 +15,9 @@ const ChildUpdates = ({ updates }) => {
             <FlatList
               horizontal
               data={item.data}
-              renderItem={({ item }) => <Image source={item.imageSource} />}
+              renderItem={({ item }) => (
+                <Image source={{ uri: item.imageurl }} style={styles.image} />
+              )}
               ItemSeparatorComponent={() => <View style={styles.divider} />}
               keyExtractor={item => '' + item.id}
             />
@@ -30,9 +32,9 @@ const ChildUpdates = ({ updates }) => {
 ChildUpdates.propTypes = {
   updates: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      imageSource: PropTypes.number.isRequired,
-      created: PropTypes.instanceOf(Date),
+      id: PropTypes.string.isRequired,
+      imageurl: PropTypes.string.isRequired,
+      createdAt: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };
