@@ -31,9 +31,8 @@ const ChildInfo = ({
             editChildInfo ? () => updateChildInfo() : () => showEditInfo()
           }
           titleStyle={{
-            marginTop: -5,
-            marginBottom: -7,
-            paddingHorizontal: 6,
+            paddingHorizontal: 2,
+            textAlignVertical: 'center',
           }}
         />
       </View>

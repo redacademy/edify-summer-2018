@@ -30,7 +30,10 @@ const ChildProfile = ({
                 navigation.navigate('ChildInfo', { child: child });
               }}
               color={colors.teal}
-              titleStyle={{ marginTop: -5, marginBottom: -7 }}
+              titleStyle={{
+                paddingHorizontal: 2,
+                textAlignVertical: 'center',
+              }}
             />
           }
         />
