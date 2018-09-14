@@ -4,6 +4,7 @@ import { StarIcon } from '../../Icons/StarIcon';
 import styles from './styles';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import UserContext from './../../../context/UserContext';
 
 export default class Note extends Component {
   constructor(props) {
@@ -89,18 +90,26 @@ export default class Note extends Component {
         animatedMessage: '',
       },
     );
+
     return (
       <Animated.View
         key={item.id}
         style={[styles.note, { height: this.state.height }]}
         onLayout={event => this._setHeights(event.nativeEvent.layout)}
       >
-        <View style={styles.container}>
-          <Text style={styles.noteTitle}>{`Posted by ${item.author} -- ${moment(
-            item.created,
-          ).format('MMMM Do YYYY')}`}</Text>
-          <StarIcon important={item.important} />
-        </View>
+        <UserContext.Consumer>
+          {values => (
+            <View style={styles.container}>
+              {/* TODO: Change commentor's name depending on who wrote it? */}
+              {/* TODO: Show only first name?  */}
+              <Text style={styles.noteTitle}>{`Posted by ${
+                item.creator.name
+              } -- ${moment(item.createdAt).format('MMMM Do YYYY')}`}</Text>
+
+              <StarIcon important={item.starred} />
+            </View>
+          )}
+        </UserContext.Consumer>
         <TouchableOpacity
           onPress={this.state.expanded ? this._shrinkNote : this._expandNote}
           activeOpacity={0.8}
@@ -122,10 +131,12 @@ export default class Note extends Component {
 
 Note.propTypes = {
   item: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    created: PropTypes.instanceOf(Date),
-    important: PropTypes.bool.isRequired,
+    creator: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+    }),
+    createdAt: PropTypes.string.isRequired,
+    starred: PropTypes.bool.isRequired,
   }),
 };

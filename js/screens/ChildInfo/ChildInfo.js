@@ -20,7 +20,6 @@ const ChildInfo = ({
   updateChildInfo,
   updateFormValues,
 }) => {
-  const { info } = child;
   return (
     <ScrollView style={styles.root}>
       <View style={styles.buttonContainer}>
@@ -37,25 +36,22 @@ const ChildInfo = ({
         />
       </View>
       <ProfileCard
-        avatar={child.avatar}
+        avatar={child.avatar.imageurl}
         action={<ActionButton pressed={() => {}} />}
       />
       <View style={styles.formContainer}>
         {editChildInfo ? (
-          <ChildInfoForm
-            updateFormValues={updateFormValues}
-            child={child.info}
-          />
+          <ChildInfoForm updateFormValues={updateFormValues} child={child} />
         ) : (
           <View>
             <Text style={styles.title}>Parent Name</Text>
-            <Text style={styles.info}>{info.parentName}</Text>
+            <Text style={styles.info}>{child.parent.name}</Text>
             <Text style={styles.title}>Child Name</Text>
-            <Text style={styles.info}>{info.childName}</Text>
+            <Text style={styles.info}>{child.name}</Text>
             <Text style={styles.title}>Parent Email</Text>
-            <Text style={styles.info}>{info.parentEmail}</Text>
+            <Text style={styles.info}>{child.parent.email}</Text>
             <Text style={styles.title}>Parent Phone</Text>
-            <Text style={styles.info}>{info.parentPhone}</Text>
+            <Text style={styles.info}>{child.parent.phone}</Text>
           </View>
         )}
       </View>

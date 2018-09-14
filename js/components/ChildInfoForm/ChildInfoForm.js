@@ -19,7 +19,7 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   textContentType="name"
                   placeholder="parent name"
                   {...input}
-                  value={child.parentName}
+                  value={child.parent.name}
                   onChangeText={() => {
                     updateFormValues(values);
                   }}
@@ -37,7 +37,7 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   textContentType="name"
                   placeholder="child name"
                   {...input}
-                  value={child.childName}
+                  value={child.name}
                   onChangeText={() => {
                     updateFormValues(values);
                   }}
@@ -55,7 +55,7 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   textContentType="emailAddress"
                   placeholder="Email"
                   {...input}
-                  value={child.parentEmail}
+                  value={child.parent.email}
                   onChangeText={() => {
                     updateFormValues(values);
                   }}
@@ -73,7 +73,7 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   textContentType="telephoneNumber"
                   placeholder="parent phone"
                   {...input}
-                  value={child.parentPhone}
+                  value={child.parent.phone}
                   onChangeText={() => {
                     updateFormValues(values);
                   }}
@@ -91,10 +91,12 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
 ChildInfoForm.propTypes = {
   updateFormValues: PropTypes.func.isRequired,
   child: PropTypes.shape({
-    parentEmail: PropTypes.string.isRequired,
-    parentPhone: PropTypes.string.isRequired,
-    parentName: PropTypes.string.isRequired,
-    childName: PropTypes.string.isRequired,
+    parent: PropTypes.shape({
+      email: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    }),
+    name: PropTypes.string.isRequired,
   }).isRequired,
 };
 

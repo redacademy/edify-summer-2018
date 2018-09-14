@@ -6,10 +6,11 @@ import { AddIcon } from '../Icons/AddIcon';
 import PropTypes from 'prop-types';
 
 const NoteList = ({ notes, showModal }) => {
+  const notesArr = [...notes];
   return (
     <View style={styles.root}>
       <FlatList
-        data={notes.sort((a, b) => a.created - b.created)}
+        data={notesArr.sort((a, b) => b.createdAt - a.createdAt)}
         keyExtractor={item => '' + item.id}
         renderItem={({ item }) => <Note item={item} />}
       />
@@ -27,11 +28,11 @@ const NoteList = ({ notes, showModal }) => {
 NoteList.propTypes = {
   notes: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       message: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      created: PropTypes.instanceOf(Date),
-      important: PropTypes.bool.isRequired,
+      creator: PropTypes.shape({ name: PropTypes.string.isRequired }),
+      createdAt: PropTypes.string.isRequired,
+      starred: PropTypes.bool.isRequired,
     }),
   ),
   showModal: PropTypes.func.isRequired,
