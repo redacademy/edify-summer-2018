@@ -32,6 +32,11 @@ const styles = StyleSheet.create({
     borderBottomColor: colors.teal,
     borderBottomWidth: 3,
   },
+  noNotesUpdates: {
+    fontFamily: typography.firstFont,
+    fontSize: 20,
+    textAlign: 'center',
+  },
 });
 
 export default styles;

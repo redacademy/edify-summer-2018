@@ -21,7 +21,7 @@ const ChildProfile = ({
     <View style={styles.root}>
       <ScrollView>
         <ProfileCard
-          avatar={child.avatar}
+          avatar={child.avatar.imageurl}
           title={<Text style={styles.text}>{child.grade}</Text>}
           action={
             <OutlinedButton
@@ -58,9 +58,15 @@ const ChildProfile = ({
           </TouchableOpacity>
         </View>
         {showUpdates ? (
-          <ChildUpdates updates={child.updates} />
-        ) : (
+          child.posts && child.posts.length > 0 ? (
+            <ChildUpdates updates={child.updates} />
+          ) : (
+            <Text style={styles.noNotesUpdates}>No updates to show</Text>
+          )
+        ) : child.notes && child.notes.length > 0 ? (
           <NoteList notes={child.notes} showModal={showModal} />
+        ) : (
+          <Text style={styles.noNotesUpdates}>No notes to show</Text>
         )}
       </ScrollView>
       <AddNote open={modalShown} close={showModal} />
