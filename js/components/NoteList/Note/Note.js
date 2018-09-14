@@ -103,7 +103,7 @@ export default class Note extends Component {
               {/* TODO: Change commentor's name depending on who wrote it? */}
               {/* TODO: Show only first name?  */}
               <Text style={styles.noteTitle}>{`Posted by ${
-                item.creator.name
+                item.creator.firstname
               } -- ${moment(item.createdAt).format('MMMM Do YYYY')}`}</Text>
 
               <StarIcon important={item.starred} />
@@ -134,7 +134,7 @@ Note.propTypes = {
     id: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
     creator: PropTypes.shape({
-      name: PropTypes.string.isRequired,
+      firstname: PropTypes.string.isRequired,
     }),
     createdAt: PropTypes.string.isRequired,
     starred: PropTypes.bool.isRequired,

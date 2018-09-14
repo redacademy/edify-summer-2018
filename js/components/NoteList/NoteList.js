@@ -30,7 +30,7 @@ NoteList.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       message: PropTypes.string.isRequired,
-      creator: PropTypes.shape({ name: PropTypes.string.isRequired }),
+      creator: PropTypes.shape({ firstname: PropTypes.string.isRequired }),
       createdAt: PropTypes.string.isRequired,
       starred: PropTypes.bool.isRequired,
     }),

@@ -21,6 +21,7 @@ import { EdifyIcon } from '../components/Icons/EdifyIcon';
 import { sharedNavigationOptions } from './config';
 import { colors } from '../config/styles';
 import ActivityScreen from '../screens/Activity';
+import ChildPostScreen from '../screens/ChildPost'
 
 const EdifyStack = createStackNavigator(
   {
@@ -30,6 +31,7 @@ const EdifyStack = createStackNavigator(
     Activity: ActivityScreen,
     Resources: ResourcesScreen,
     Contact: ContactScreen,
+   
   },
   {
     navigationOptions: ({ navigation }) => ({
@@ -53,6 +55,7 @@ const ProfileStack = createStackNavigator(
     ChildProfile: ChildProfileScreen,
     ChildInfo: ChildInfoScreen,
     Educator: EducatorScreen,
+    ChildPost: ChildPostScreen
   },
   {
     navigationOptions: ({ navigation }) => ({
