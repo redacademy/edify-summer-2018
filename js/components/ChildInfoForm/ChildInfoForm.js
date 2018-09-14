@@ -5,16 +5,14 @@ import styles from './styles';
 import PropTypes from 'prop-types';
 
 const ChildInfoForm = ({ updateFormValues, child }) => {
-  console.log(child);
   return (
     <Form
       onSubmit={() => {}}
-      validate={() => {}}
       render={({ values }) => (
         <View style={styles.inputContainer}>
           <Field
             name="parentName"
-            render={({ input, meta }) => (
+            render={({ input }) => (
               <Fragment>
                 <Text style={styles.formTitle}>Parent Name</Text>
                 <TextInput
@@ -22,19 +20,17 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   placeholder="parent name"
                   {...input}
                   value={child.parentName}
-                  onChangeText={text => {
+                  onChangeText={() => {
                     updateFormValues(values);
                   }}
                   style={styles.textField}
                 />
               </Fragment>
-
-              // ... {meta.touched && meta.error && <Text>{meta.error}</Text>}
             )}
           />
           <Field
             name="childName"
-            render={({ input, meta }) => (
+            render={({ input }) => (
               <Fragment>
                 <Text style={styles.formTitle}>Child Name</Text>
                 <TextInput
@@ -42,18 +38,17 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   placeholder="child name"
                   {...input}
                   value={child.childName}
-                  onChangeText={text => {
+                  onChangeText={() => {
                     updateFormValues(values);
                   }}
                   style={styles.textField}
                 />
               </Fragment>
-              // ... {meta.touched && meta.error && <Text>{meta.error}</Text>}
             )}
           />
           <Field
             name="email"
-            render={({ input, meta }) => (
+            render={({ input }) => (
               <Fragment>
                 <Text style={styles.formTitle}>Parent Email</Text>
                 <TextInput
@@ -61,19 +56,17 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   placeholder="Email"
                   {...input}
                   value={child.parentEmail}
-                  onChangeText={text => {
+                  onChangeText={() => {
                     updateFormValues(values);
-                    input.onChange(text);
                   }}
                   style={styles.textField}
                 />
               </Fragment>
-              // ... {meta.touched && meta.error && <Text>{meta.error}</Text>}
             )}
           />
           <Field
             name="phone"
-            render={({ input, meta }) => (
+            render={({ input }) => (
               <Fragment>
                 <Text style={styles.formTitle}>Parent Phone</Text>
                 <TextInput
@@ -81,14 +74,12 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   placeholder="parent phone"
                   {...input}
                   value={child.parentPhone}
-                  onChangeText={text => {
+                  onChangeText={() => {
                     updateFormValues(values);
-                    input.onChange(text);
                   }}
                   style={styles.textField}
                 />
               </Fragment>
-              // ... {meta.touched && meta.error && <Text>{meta.error}</Text>}
             )}
           />
         </View>

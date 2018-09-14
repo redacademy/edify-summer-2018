@@ -18,7 +18,7 @@ export default class ChildInfoContainer extends Component {
     this.setState({ formValues: values });
   };
   _updateChildInfo = () => {
-    // function to update database
+    // TODO: add function to update child information
     this.setState({ formValues: {}, editInfo: false });
   };
   static navigationOptions = {
@@ -26,7 +26,7 @@ export default class ChildInfoContainer extends Component {
   };
   render() {
     const { navigation } = this.props;
-    const child = navigation.getParam('child', 'hello');
+    const child = navigation.getParam('child');
     return (
       <ChildInfo
         child={child}
