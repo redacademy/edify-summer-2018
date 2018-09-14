@@ -23,8 +23,7 @@ class ChildPostContainer extends Component {
               description
               creator {
                 id
-                firstname
-                lastname
+                name
               }
               createdAt
               tag {
