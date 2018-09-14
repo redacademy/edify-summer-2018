@@ -58,7 +58,7 @@ const ChildProfile = ({
           </TouchableOpacity>
         </View>
         {showUpdates ? (
-          child.posts && child.posts.length > 0 ? (
+          child.updates && child.updates.length > 0 ? (
             <ChildUpdates updates={child.updates} />
           ) : (
             <Text style={styles.noNotesUpdates}>No updates to show</Text>

@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import { typography } from '../../config/styles';
 
-const { height } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   root: {
@@ -17,6 +17,10 @@ const styles = StyleSheet.create({
   },
   divider: {
     width: 5,
+  },
+  image: {
+    height: width * 0.4,
+    width: width * 0.4,
   },
 });
 

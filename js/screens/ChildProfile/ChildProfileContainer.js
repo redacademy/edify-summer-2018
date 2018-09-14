@@ -29,6 +29,25 @@ const CHILD_DATA = gql`
         email
         phone
       }
+      updates {
+        id
+        createdAt
+        imageurl
+        creator {
+          name
+          id
+        }
+        tag {
+          title
+          description
+          id
+        }
+        mood {
+          imageurl
+          description
+        }
+        description
+      }
     }
   }
 `;
