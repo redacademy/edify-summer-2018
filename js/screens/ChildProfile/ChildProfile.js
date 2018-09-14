@@ -15,8 +15,8 @@ const ChildProfile = ({
   toggleShowUpdates,
   showModal,
   modalShown,
+  navigation,
 }) => {
-  console.log(toggleShowUpdates);
   return (
     <View style={styles.root}>
       <ScrollView>
@@ -26,8 +26,14 @@ const ChildProfile = ({
           action={
             <OutlinedButton
               title="more info"
-              pressed={() => {}}
+              pressed={() => {
+                navigation.navigate('ChildInfo', { child: child });
+              }}
               color={colors.teal}
+              titleStyle={{
+                paddingHorizontal: 2,
+                textAlignVertical: 'center',
+              }}
             />
           }
         />
@@ -68,6 +74,7 @@ ChildProfile.propTypes = {
   toggleShowUpdates: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
   modalShown: PropTypes.bool.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default ChildProfile;

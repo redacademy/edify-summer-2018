@@ -14,10 +14,10 @@ export default class ChildProfileContainer extends Component {
         grade: 'Grade Four',
         avatar: 'fox',
         info: {
-          parentName: '',
-          childName: '',
-          parentEmail: '',
-          parentPhone: '',
+          parentName: 'Isabella Webb',
+          childName: 'Ethan Webb',
+          parentEmail: 'kyler.jewess@yahoo.ca',
+          parentPhone: '7789229292',
         },
         notes: [
           {
@@ -168,6 +168,7 @@ export default class ChildProfileContainer extends Component {
         child={this.state.data}
         showModal={show => this._showModal(show)}
         modalShown={this.state.showModal}
+        navigation={this.props.navigation}
       />
     );
   }
