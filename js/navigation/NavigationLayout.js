@@ -10,6 +10,7 @@ import EdifyScreen from '../screens/Edify';
 import ResourcesScreen from '../screens/Resources';
 import LoginScreen from '../screens/Login';
 import LearningCurriculumScreen from '../screens/LearningCurriculum';
+import EducatorScreen from '../screens/Educator';
 import OnboardingScreen from '../screens/Onboarding';
 import CurriculumScreen from '../screens/Curriculum';
 import ContactScreen from '../screens/Contact';
@@ -51,6 +52,7 @@ const ProfileStack = createStackNavigator(
     Profile: ProfileScreen,
     ChildProfile: ChildProfileScreen,
     ChildInfo: ChildInfoScreen,
+    Educator: EducatorScreen,
   },
   {
     navigationOptions: ({ navigation }) => ({
