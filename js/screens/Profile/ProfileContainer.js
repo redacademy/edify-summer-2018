@@ -1,37 +1,45 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
 import PropTypes from 'prop-types';
+import gql from 'graphql-tag';
+import { Query } from 'react-apollo';
+import { Text } from 'react-native';
 
+const CHILD_DATA = gql`
+  query($id: ID!) {
+    User(id: $id) {
+      id
+      child {
+        avatar {
+          imageurl
+        }
+        grade
+        id
+      }
+    }
+  }
+`;
 export default class ProfileContainer extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      data: [
-        {
-          id: 1,
-          grade: 'Grade Four',
-          avatar: 'fox',
-        },
-        {
-          id: 2,
-          grade: 'Grade Four',
-          avatar: 'cat',
-        },
-        {
-          id: 3,
-          grade: 'Grade Four',
-          avatar: 'monkey',
-        },
-      ],
-    };
   }
   static navigationOptions = {
     title: 'Profile',
   };
 
   render() {
-    return <Profile data={this.state.data} />;
+    userId = this.props.navigation.getParam('userId');
+
+    return (
+      <Query query={CHILD_DATA} variables={{ id: userId }}>
+        {({ loading, error, data: { User } }) => {
+          //TODO: Loading and Errors implemented in another issue
+          if (loading) return <Text>Loading</Text>;
+          if (error) return <Text> Error</Text>;
+          return <Profile data={User.child} />;
+        }}
+      </Query>
+    );
   }
 }
 

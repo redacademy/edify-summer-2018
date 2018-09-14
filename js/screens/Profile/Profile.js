@@ -13,7 +13,7 @@ const Profile = ({ data, navigation }) => {
       {data.map((child, index) => (
         <ProfileCard
           key={child.id}
-          avatar={child.avatar}
+          avatar={child.avatar.imageurl}
           style={{
             cardBackgroundColor: index % 2 ? colors.skyblue : colors.purple,
             avatarBackgroundColor: index % 2 ? colors.purple : colors.teal,
@@ -37,9 +37,11 @@ const Profile = ({ data, navigation }) => {
 Profile.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       grade: PropTypes.string.isRequired,
-      avatar: PropTypes.string.isRequired,
+      avatar: PropTypes.shape({
+        imageurl: PropTypes.string.isRequired,
+      }),
     }),
   ),
   navigation: PropTypes.object.isRequired,

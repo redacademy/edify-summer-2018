@@ -9,12 +9,15 @@ class AuthLoading extends React.Component {
   }
 
   _checkLoggedIn = async () => {
-    const getUserToken = await getUser();
-    const userToken = getUserToken.map(user => user.token);
+    const getUserData = await getUser();
+    const user = getUserData.map(user => ({ token: user.token, id: user.id }));
 
-    this.props.navigation.navigate(
-      !userToken[0] ? 'loginStack' : 'NavigationLayout',
-    );
+    const { navigation } = this.props;
+    if (user[0] && user[0].token) {
+      navigation.navigate('Profile', { userId: user[0].id });
+    } else {
+      navigation.navigate('loginStack');
+    }
   };
 
   //TODO: Splash screen will be inserted when designers get back to us.
