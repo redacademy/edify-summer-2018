@@ -11,6 +11,7 @@ export const colors = {
   lightPurple: '#5d5ba0',
   lightGrey: '#E4EAEF',
   grey: '#4A4A4A',
+  mediumGrey: '#939393',
 };
 
 export const typography = {

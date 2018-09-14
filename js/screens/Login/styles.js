@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     position: 'relative',
   },
   inactiveLogin: {
-    backgroundColor: colors.red,
+    backgroundColor: colors.mediumGrey,
   },
   errorText: {
     color: colors.white,
