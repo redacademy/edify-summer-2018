@@ -9,10 +9,10 @@ class ChildPostContainer extends Component {
   static navigationOptions = {
     title: 'Profile',
   };
-  
+
   render() {
     const { navigation } = this.props;
-    const postId = navigation.getParam("postId");
+    const postId = navigation.getParam('postId');
     return (
       <Query
         variables={{ id: postId }}
@@ -44,7 +44,9 @@ class ChildPostContainer extends Component {
           console.log(data);
           if (loading) return <LoadingScreen />;
           if (error) return <QueryError />;
-          return <ChildPost post={data.Posts} navigation={this.props.navigation} />;
+          return (
+            <ChildPost post={data.Posts} navigation={this.props.navigation} />
+          );
         }}
       </Query>
     );
