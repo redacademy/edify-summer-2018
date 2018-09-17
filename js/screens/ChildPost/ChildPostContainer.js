@@ -9,6 +9,7 @@ class ChildPostContainer extends Component {
   static navigationOptions = {
     title: 'Profile',
   };
+
   render() {
     const { navigation } = this.props;
     const postId = navigation.getParam('postId');
@@ -22,7 +23,8 @@ class ChildPostContainer extends Component {
               description
               creator {
                 id
-                name
+                firstname
+                lastname
               }
               createdAt
               tag {
