@@ -16,7 +16,7 @@ const ProfileCard = ({ avatar, style, action, title, imageSource }) => {
     <View style={[styles.card, cardBackground]}>
       <View style={[styles.imageContainer, !imageSource && avatarBackground]}>
         {imageSource ? (
-          <Image source={imageSource} style={styles.image} />
+          <Image source={{ uri: imageSource }} style={styles.image} />
         ) : (
           <Avatar avatar={avatar} />
         )}
@@ -38,7 +38,7 @@ ProfileCard.defaultProps = {
 
 ProfileCard.propTypes = {
   avatar: PropTypes.string.isRequired,
-  imageSource: PropTypes.number,
+  imageSource: PropTypes.string,
   style: PropTypes.shape({
     avatarBackgroundColor: PropTypes.string.isRequired,
     cardBackgroundColor: PropTypes.string.isRequired,
