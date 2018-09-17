@@ -10,9 +10,11 @@ const GET_USER = gql`
   query getUser($id: ID!) {
     User(id: $id) {
       id
-      name
+      firstname
+      lastname
       phone
       email
+      imageurl
     }
   }
 `;
@@ -22,8 +24,12 @@ export default class EducatorContainer extends Component {
     title: 'Profile',
   };
   render() {
+    const id = this.props.navigation.getParam(
+      'id',
+      'cjm1jvtfi04qy0197ww436yqq',
+    );
     return (
-      <Query query={GET_USER} variables={{ id: 'cjm1jvtfi04qy0197ww436yqq' }}>
+      <Query query={GET_USER} variables={{ id }}>
         {({ error, loading, data }) => {
           if (loading) return <LoadingScreen />;
           if (error) return <QueryError />;

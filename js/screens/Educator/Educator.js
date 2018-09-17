@@ -7,16 +7,17 @@ import call from 'react-native-phone-call';
 
 const EducatorContact = ({ user }) => (
   <View style={styles.educatorInfoContainer}>
-    <Text>{user.name}</Text>
+    <Text>
+      {user.firstname} {user.lastname}
+    </Text>
     <Text>{user.phone}</Text>
   </View>
 );
 const Educator = ({ user }) => {
-  console.log(user);
   return (
     <ScrollView style={styles.root}>
       <ProfileCard
-        imageSource={require('../../assets/images/onboarding/provider.png')}
+        imageSource={user.imageurl}
         title={<EducatorContact user={user} />}
         action={<Text>{user.email}</Text>}
       />
@@ -33,7 +34,7 @@ const Educator = ({ user }) => {
             call({
               number: user.phone.replace(/(\s+)/g, ''),
               prompt: true,
-            }).catch(console.error)
+            }).catch(err => err)
           }
         >
           <Image source={require('../../assets/images/icons/phone.png')} />
@@ -48,7 +49,8 @@ Educator.propTypes = {
     id: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    firstname: PropTypes.string.isRequired,
+    lastname: PropTypes.string.isRequired,
   }),
 };
 export default Educator;
