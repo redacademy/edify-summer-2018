@@ -3,7 +3,9 @@ type User @model {
   email: String! @isUnique
   password: String!
   phone: String
-  name: String
+  firstname: String
+  lastname: String
+  imageurl: String #image of an educator
   showOnboarding: Boolean @defaultValue(value: "true")
   child: [Child!]! @relation(name: "ChildOnParent") #CU2
   note: [Notes!]! @relation(name: "NotesOnUser") #NU2
