@@ -29,7 +29,6 @@ export default class AddNote extends Component {
               close={close}
               updateText={text => this._updateText(text)}
               showCloseIcon
-              value={this.state.text}
               pressed={() => {}}
               title="Add Note:"
             />

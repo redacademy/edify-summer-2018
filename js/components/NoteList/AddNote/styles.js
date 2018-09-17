@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     marginTop: 22,
   },
   container: {
-    top: height / 3.7,
+    top: 180,
     marginHorizontal: 25,
     backgroundColor: 'white',
     shadowColor: 'black',

@@ -17,7 +17,8 @@ const CHILD_DATA = gql`
         id
         creator {
           id
-          name
+          firstname
+          lastname
         }
         message
         starred
@@ -25,7 +26,8 @@ const CHILD_DATA = gql`
       }
       parent {
         id
-        name
+        firstname
+        lastname
         email
         phone
       }
@@ -34,7 +36,8 @@ const CHILD_DATA = gql`
         createdAt
         imageurl
         creator {
-          name
+          firstname
+          lastname
           id
         }
         tag {
