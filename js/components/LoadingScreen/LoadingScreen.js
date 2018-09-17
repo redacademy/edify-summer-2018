@@ -1,12 +1,12 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 import styles from './styles';
+import { colors } from '../../config/styles';
 
 export default (loadingScreen = () => {
   return (
-    <Image
-      source={require('../../assets/gif/frogloading.gif')}
-      style={styles.loadingScreen}
-    />
+    <View style={styles.loadingScreen}>
+      <ActivityIndicator size="large" color={colors.purple} />
+    </View>
   );
 });

@@ -45,7 +45,9 @@ const ChildInfo = ({
         ) : (
           <View>
             <Text style={styles.title}>Parent Name</Text>
-            <Text style={styles.info}>{child.parent.name}</Text>
+            <Text style={styles.info}>
+              {child.parent.firstname} {child.parent.lastname}
+            </Text>
             <Text style={styles.title}>Child Name</Text>
             <Text style={styles.info}>{child.name}</Text>
             <Text style={styles.title}>Parent Email</Text>
