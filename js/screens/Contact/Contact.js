@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 import ContactPhoneIcon from '../../components/Icons/ContactPhoneIcon';
 import ContactMailIcon from '../../components/Icons/ContactMailIcon';

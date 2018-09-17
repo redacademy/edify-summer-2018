@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const Edify = ({ navigation }) => {
   return (
@@ -33,6 +34,10 @@ const Edify = ({ navigation }) => {
       <View style={styles.divider} />
     </View>
   );
+};
+
+Edify.propTypes = {
+  navigation: PropTypes.object.isRequired,
 };
 
 export default Edify;

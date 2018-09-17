@@ -3,6 +3,7 @@ import Login from './Login';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 import UserContext from './../../context/UserContext';
+import PropTypes from 'prop-types';
 
 const SIGNIN_USER = gql`
   mutation authenticateUser($email: String!, $password: String!) {
@@ -37,3 +38,7 @@ export default class LoginContainer extends Component {
     );
   }
 }
+
+LoginContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};

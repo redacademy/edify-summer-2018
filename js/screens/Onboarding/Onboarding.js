@@ -117,6 +117,7 @@ const OnboardingPage = ({ navigation, toggleOnboarding }) => {
 
 OnboardingPage.propTypes = {
   navigation: PropTypes.object.isRequired,
+  toggleOnboarding: PropTypes.func.isRequired,
 };
 
 export default OnboardingPage;

@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import LoadingScreen from '../../components/LoadingScreen';
 import QueryError from '../../components/QueryError';
+import PropTypes from 'prop-types';
 export default class CurriculumContainer extends Component {
   static navigationOptions = {
     title: 'Curriculum',
@@ -34,3 +35,7 @@ export default class CurriculumContainer extends Component {
     );
   }
 }
+
+CurriculumContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
