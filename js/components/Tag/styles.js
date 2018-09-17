@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     paddingHorizontal: 10,
-    color: "white"
+    color: colors.white,
   },
   tagWrapper: {
     borderWidth: 1,
