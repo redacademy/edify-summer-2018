@@ -75,7 +75,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontFamily: typography.secFont,
     fontWeight: 'bold',
-    paddingLeft: 7,
+    color: colors.grey,
+  },
+
+  divider: {
+    borderWidth: 0.2,
+    backgroundColor: colors.grey,
   },
   textInput: {
     borderColor: colors.lightPurple,
@@ -83,8 +88,11 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 7,
     textAlign: 'left',
-    padding: 2,
+    padding: 5,
+    fontFamily: typography.secFont,
+    color: colors.grey,
   },
+
   button: {
     padding: 10,
     backgroundColor: colors.lightPurple,
@@ -94,21 +102,36 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginVertical: 10,
   },
+
   submit: {
     fontFamily: typography.secFont,
     fontSize: 16,
     color: colors.white,
     fontWeight: 'bold',
   },
-  close: {
-    color: colors.lightPurple,
-    bottom: 5,
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
   header: {
-    flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  comment:{
+    paddingVertical: 10,
+  },
+  commenter: {
+    fontFamily: typography.mainFont,
+    fontSize: 16,
+    color: colors.grey,
+    fontWeight: '400',
+  },
+  commentText:{
+    fontFamily: typography.secFont,
+    fontSize: 16,
+    color: colors.grey,
+  
+  },
+  commentTime:{
+    paddingTop:10,
+    fontFamily: typography.secFont,
+    fontSize: 16,
+    color: colors.grey,
+  }
 });
 export default styles;
