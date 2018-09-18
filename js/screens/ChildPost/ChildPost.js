@@ -69,15 +69,6 @@ const ChildPost = ({ post, navigation }) => {
             <Text style={styles.submit}>Submit</Text>
           </TouchableOpacity>
         </View>
-        <View>
-          <Text>Feeling:</Text>
-          <View>
-            <Image
-              style={{ width: 100, height: 100 }}
-              source={{ uri: post.mood.imageurl }}
-            />
-          </View>
-        </View>
       </View>
     </ScrollView>
   );
