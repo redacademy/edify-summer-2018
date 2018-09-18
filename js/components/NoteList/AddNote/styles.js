@@ -5,10 +5,10 @@ const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   modalContainer: {
-    marginTop: 22,
+    marginTop: 18,
   },
   container: {
-    top: height / 3,
+    top: 180,
     marginHorizontal: 25,
     backgroundColor: 'white',
     shadowColor: 'black',
@@ -53,15 +53,14 @@ const styles = StyleSheet.create({
     color: colors.white,
     fontWeight: 'bold',
   },
-  close: {
-    color: colors.lightPurple,
-    bottom: 5,
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+  close: {
+    color: colors.lightPurple,
+    fontSize: 16,
+    fontWeight: 'bold',
   },
 });
 

@@ -11,7 +11,7 @@ export default class AddNote extends Component {
     };
   }
   render() {
-    const { isOpen, close, showX } = this.props;
+    const { isOpen, close } = this.props;
     return (
       <Modal
         animationType="slide"
@@ -24,20 +24,17 @@ export default class AddNote extends Component {
           <View style={styles.modal}>
             <View style={styles.header}>
               <Text style={styles.title}>Add Note:</Text>
-              {showX && (
-                <TouchableOpacity
-                  activeOpacity={0.5}
-                  onPress={() => close(false)}
-                >
-                  <Text style={styles.close}>X</Text>
-                </TouchableOpacity>
-              )}
+              <TouchableOpacity
+                activeOpacity={0.5}
+                onPress={() => close(false)}
+              >
+                <Text style={styles.close}>X</Text>
+              </TouchableOpacity>
             </View>
             <TextInput
               {...this.props}
               multiline={true}
               onChangeText={text => this.setState({ text })}
-              autoFocus
               value={this.state.text}
               style={styles.textInput}
             />
