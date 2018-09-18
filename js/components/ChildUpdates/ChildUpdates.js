@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { formatUpdatesData } from '../../lib/helpers';
+import NoItems from '../../components/NoItems';
 import styles from './styles';
 import PropTypes from 'prop-types';
 
@@ -9,6 +10,7 @@ const ChildUpdates = ({ updates, navigation }) => {
     <View style={styles.root}>
       <FlatList
         data={formatUpdatesData(updates)}
+        ListEmptyComponent={<NoItems message="No current updates" />}
         renderItem={({ item }) => (
           <View>
             <Text style={styles.title}>{item.title}</Text>

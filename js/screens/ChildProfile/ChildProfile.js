@@ -58,15 +58,9 @@ const ChildProfile = ({
           </TouchableOpacity>
         </View>
         {showUpdates ? (
-          child.updates && child.updates.length > 0 ? (
-            <ChildUpdates updates={child.updates} navigation={navigation} />
-          ) : (
-            <Text style={styles.noNotesUpdates}>No updates to show</Text>
-          )
-        ) : child.notes && child.notes.length > 0 ? (
-          <NoteList notes={child.notes} showModal={showModal} />
+          <ChildUpdates updates={child.updates} navigation={navigation} />
         ) : (
-          <Text style={styles.noNotesUpdates}>No notes to show</Text>
+          <NoteList notes={child.notes} showModal={showModal} />
         )}
       </ScrollView>
       <AddNote open={modalShown} close={showModal} />
