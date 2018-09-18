@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, TouchableOpacity, Modal } from 'react-native';
 import styles from './styles';
 import PropTypes from 'prop-types';
 
-const TagModal = ({ open, close, title, description, backgroundColor }) => {
+const TagModal = ({ isOpen, close, title, description, backgroundColor }) => {
   return (
     <Modal
       animationType="slide"
       transparent={true}
-      visible={open}
+      visible={isOpen}
       onRequestClose={() => close()}
     >
       <View style={styles.page}>
@@ -32,7 +32,7 @@ const TagModal = ({ open, close, title, description, backgroundColor }) => {
 };
 
 TagModal.propTypes = {
-  open: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool.isRequired,
   close: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

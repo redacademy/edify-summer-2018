@@ -8,7 +8,6 @@ import ChildUpdates from '../../components/ChildUpdates';
 import AddNote from '../../components/NoteList/AddNote';
 import { colors } from '../../config/styles';
 import PropTypes from 'prop-types';
-import TagModal from '../../components/TagModal';
 
 const ChildProfile = ({
   child,
@@ -70,7 +69,7 @@ const ChildProfile = ({
           <Text style={styles.noNotesUpdates}>No notes to show</Text>
         )}
       </ScrollView>
-      <AddNote open={modalShown} close={showModal} />
+      <AddNote isOpen={modalShown} close={showModal} />
     </View>
   );
 };
