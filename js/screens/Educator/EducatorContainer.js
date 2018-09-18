@@ -25,8 +25,7 @@ export default class EducatorContainer extends Component {
   };
   render() {
     const id = this.props.navigation.getParam(
-      'id',
-      'cjm1jvtfi04qy0197ww436yqq',
+      'id'
     );
     return (
       <Query query={GET_USER} variables={{ id }}>

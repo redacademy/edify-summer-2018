@@ -59,7 +59,7 @@ const ChildProfile = ({
         </View>
         {showUpdates ? (
           child.updates && child.updates.length > 0 ? (
-            <ChildUpdates updates={child.updates} />
+            <ChildUpdates updates={child.updates} navigation={navigation} />
           ) : (
             <Text style={styles.noNotesUpdates}>No updates to show</Text>
           )
