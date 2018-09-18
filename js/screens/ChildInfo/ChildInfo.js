@@ -17,8 +17,12 @@ const ChildInfo = ({
   child,
   editChildInfo,
   showEditInfo,
-  updateChildInfo,
   updateFormValues,
+  setFormValues,
+  updateChild,
+  updateUser,
+  values,
+  resetForm,
 }) => {
   return (
     <ScrollView style={styles.root}>
@@ -27,7 +31,30 @@ const ChildInfo = ({
           title={editChildInfo ? 'Done' : 'Edit'}
           color={colors.teal}
           pressed={
-            editChildInfo ? () => updateChildInfo() : () => showEditInfo()
+            editChildInfo
+              ? async () => {
+                  parentNames = values.parentName.split(' ');
+
+                  await updateUser({
+                    variables: {
+                      id: child.parent.id,
+                      firstname: parentNames[0],
+                      lastname: parentNames[1],
+                      phone: values.phone,
+                      email: values.email,
+                    },
+                  });
+
+                  await updateChild({
+                    variables: {
+                      childId: child.id,
+                      childName: values.childName,
+                    },
+                  });
+
+                  resetForm();
+                }
+              : () => showEditInfo()
           }
           titleStyle={{
             paddingHorizontal: 2,
@@ -41,7 +68,11 @@ const ChildInfo = ({
       />
       <View style={styles.formContainer}>
         {editChildInfo ? (
-          <ChildInfoForm updateFormValues={updateFormValues} child={child} />
+          <ChildInfoForm
+            updateFormValues={updateFormValues}
+            child={child}
+            setFormValues={setFormValues}
+          />
         ) : (
           <View>
             <Text style={styles.title}>Parent Name</Text>
@@ -65,8 +96,17 @@ ChildInfo.propTypes = {
   child: PropTypes.object.isRequired,
   editChildInfo: PropTypes.bool.isRequired,
   showEditInfo: PropTypes.func.isRequired,
-  updateChildInfo: PropTypes.func.isRequired,
   updateFormValues: PropTypes.func.isRequired,
+  setFormValues: PropTypes.func.isRequired,
+  updateChild: PropTypes.func.isRequired,
+  updateUser: PropTypes.func.isRequired,
+  values: PropTypes.shape({
+    parentName: PropTypes.string,
+    childName: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.string,
+  }),
+  resetForm: PropTypes.func.isRequired,
 };
 
 export default ChildInfo;
