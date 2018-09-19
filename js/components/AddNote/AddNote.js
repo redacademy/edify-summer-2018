@@ -18,14 +18,14 @@ export default class AddNote extends Component {
     };
   }
   render() {
-    const { isOpen, close } = this.props;
+    const { isOpen, closeModal } = this.props;
     return (
       <KeyboardAvoidingView behavior="padding">
         <Modal
           animationType="slide"
           transparent={true}
           visible={isOpen}
-          onRequestClose={() => close(false)}
+          onRequestClose={() => closeModal(false)}
           style={styles.modalContainer}
         >
           <View style={styles.container}>
@@ -34,7 +34,7 @@ export default class AddNote extends Component {
                 <Text style={styles.title}>Add Note:</Text>
                 <TouchableOpacity
                   activeOpacity={0.5}
-                  onPress={() => close(false)}
+                  onPress={() => closeModal(false)}
                 >
                   <Text style={styles.close}>X</Text>
                 </TouchableOpacity>
@@ -60,5 +60,5 @@ export default class AddNote extends Component {
 
 AddNote.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  close: PropTypes.func.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };

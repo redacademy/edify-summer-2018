@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles';
-import Note from './Note';
+import Note from '../Note';
 import { AddIcon } from '../Icons/AddIcon';
 import PropTypes from 'prop-types';
 
