@@ -9,6 +9,7 @@ import QueryError from '../../components/QueryError';
 const CHILD_DATA = gql`
   query($id: ID!) {
     Child(id: $id) {
+      id
       grade
       avatar {
         imageurl
@@ -19,6 +20,7 @@ const CHILD_DATA = gql`
         creator {
           id
           firstname
+          lastname
         }
         message
         starred

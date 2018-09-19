@@ -154,7 +154,7 @@ Login.propTypes = {
   signIn: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
   loginLoading: PropTypes.bool.isRequired,
-  loginError: PropTypes.bool,
+  loginError: PropTypes.object,
 };
 
 export default Login;
