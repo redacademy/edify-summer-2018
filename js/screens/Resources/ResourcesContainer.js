@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import LoadingScreen from '../../components/LoadingScreen';
 import QueryError from '../../components/QueryError';
+import PropTypes from 'prop-types';
 
 export default class ResourcesContainer extends Component {
   static navigationOptions = {
@@ -36,3 +37,7 @@ export default class ResourcesContainer extends Component {
     );
   }
 }
+
+ResourcesContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};

@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const Account = ({ logout, id, navigation }) => {
   return (
@@ -31,6 +32,12 @@ const Account = ({ logout, id, navigation }) => {
       </View>
     </View>
   );
+};
+
+Account.propTypes = {
+  logout: PropTypes.func.isRequired,
+  id: PropTypes.string.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default Account;

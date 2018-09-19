@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Account from './Account';
 import UserContext from './../../context/UserContext';
+import PropTypes from 'prop-types';
 
 export default class AccountContainer extends Component {
   static navigationOptions = {
@@ -23,3 +24,7 @@ export default class AccountContainer extends Component {
     );
   }
 }
+
+AccountContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};

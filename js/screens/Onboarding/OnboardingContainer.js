@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import OnboardingPage from './Onboarding';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
+import PropTypes from 'prop-types';
 
 const TOGGLE_ONBOARDING = gql`
   mutation($id: ID!, $showOnboarding: Boolean!) {
@@ -31,5 +32,9 @@ class OnboardingContainer extends Component {
     );
   }
 }
+
+OnboardingContainer.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
 
 export default OnboardingContainer;

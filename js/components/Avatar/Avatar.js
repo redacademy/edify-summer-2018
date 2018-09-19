@@ -5,6 +5,7 @@ const Bear = require('../../assets/images/avatar/bear.png');
 const Cat = require('../../assets/images/avatar/Cat.png');
 const Frog = require('../../assets/images/avatar/frog.png');
 const Monkey = require('../../assets/images/avatar/monkey.png');
+import PropTypes from 'prop-types';
 
 const Avatar = ({ avatar }) => {
   switch (avatar) {
@@ -21,6 +22,10 @@ const Avatar = ({ avatar }) => {
     default:
       return <Image source={Fox} />;
   }
+};
+
+Avatar.propTypes = {
+  avatar: PropTypes.string.isRequired,
 };
 
 export default Avatar;

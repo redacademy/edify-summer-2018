@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import { Form, Field } from 'react-final-form';
+import PropTypes from 'prop-types';
 
 validate = values => {
   const errors = {};
@@ -146,6 +147,14 @@ const Login = ({ navigation, signIn, user, loginLoading, loginError }) => {
       </View>
     </View>
   );
+};
+
+Login.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  signIn: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired,
+  loginLoading: PropTypes.bool.isRequired,
+  loginError: PropTypes.bool,
 };
 
 export default Login;
