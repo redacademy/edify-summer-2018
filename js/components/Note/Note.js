@@ -5,6 +5,17 @@ import styles from './styles';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import UserContext from '../../context/UserContext';
+import gql from 'graphql-tag';
+import { Mutation } from 'react-apollo';
+
+const STAR_POST = gql`
+  mutation updateNotes($noteId: ID!, $starred: Boolean!) {
+    updateNotes(id: $noteId, starred: $starred) {
+      id
+      starred
+    }
+  }
+`;
 
 export default class Note extends Component {
   constructor(props) {
@@ -105,8 +116,19 @@ export default class Note extends Component {
               <Text style={styles.noteTitle}>{`Posted by ${
                 item.creator.firstname
               } -- ${moment(item.createdAt).format('MMMM Do YYYY')}`}</Text>
-
-              <StarIcon important={item.starred} />
+              <Mutation mutation={STAR_POST}>
+                {updateNote => (
+                  <TouchableOpacity
+                    onPress={() =>
+                      updateNote({
+                        variables: { noteId: item.id, starred: !item.starred },
+                      })
+                    }
+                  >
+                    <StarIcon important={item.starred} />
+                  </TouchableOpacity>
+                )}
+              </Mutation>
             </View>
           )}
         </UserContext.Consumer>
