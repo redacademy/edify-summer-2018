@@ -64,7 +64,11 @@ const ChildProfile = ({
           <NoteList notes={child.notes} showModal={showModal} child={child} />
         )}
       </ScrollView>
+<<<<<<< HEAD
       <AddNote isOpen={modalShown} closeModal={showModal} addNote={addNote} />
+=======
+      <AddNote isOpen={modalShown} closeModal={showModal} />
+>>>>>>> moved Note and AddNote out of NoteList to separate components
     </View>
   );
 };
