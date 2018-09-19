@@ -3,7 +3,7 @@ import { View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles';
 import Note from '../Note';
 import { AddIcon } from '../Icons/AddIcon';
-import NoItems from '../../components/NoItems';
+import NoItems from '../NoItems';
 import PropTypes from 'prop-types';
 
 const NoteList = ({ notes, showModal }) => {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { View, Text, Animated, TouchableOpacity, Easing } from 'react-native';
-import { StarIcon } from '../../Icons/StarIcon';
+import { StarIcon } from '../Icons/StarIcon';
 import styles from './styles';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import UserContext from './../../../context/UserContext';
+import UserContext from '../../context/UserContext';
 
 export default class Note extends Component {
   constructor(props) {
