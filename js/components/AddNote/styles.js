@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions } from 'react-native';
-import { colors, typography } from '../../../config/styles';
+import { colors, typography } from '../../config/styles';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
   modalContainer: {
