@@ -5,7 +5,7 @@ import ProfileCard from '../../components/ProfileCard';
 import OutlinedButton from '../../components/OutlinedButton';
 import NoteList from '../../components/NoteList';
 import ChildUpdates from '../../components/ChildUpdates';
-import AddNote from '../../components/NoteList/AddNote';
+import AddNote from '../../components/AddNote';
 import { colors } from '../../config/styles';
 import PropTypes from 'prop-types';
 
@@ -63,7 +63,7 @@ const ChildProfile = ({
           <NoteList notes={child.notes} showModal={showModal} />
         )}
       </ScrollView>
-      <AddNote open={modalShown} close={showModal} />
+      <AddNote isOpen={modalShown} closeModal={showModal} />
     </View>
   );
 };

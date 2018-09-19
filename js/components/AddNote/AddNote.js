@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, Modal, TextInput } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Modal,
+  TextInput,
+  KeyboardAvoidingView,
+} from 'react-native';
 import styles from './styles';
 import PropTypes from 'prop-types';
 
@@ -11,14 +18,15 @@ export default class AddNote extends Component {
     };
   }
   render() {
-    const { open, close } = this.props;
+    const { isOpen, closeModal } = this.props;
     return (
-      <View style={styles.modalContainer}>
+      <KeyboardAvoidingView behavior="padding">
         <Modal
           animationType="slide"
           transparent={true}
-          visible={open}
-          onRequestClose={() => close(false)}
+          visible={isOpen}
+          onRequestClose={() => closeModal(false)}
+          style={styles.modalContainer}
         >
           <View style={styles.container}>
             <View style={styles.modal}>
@@ -26,7 +34,7 @@ export default class AddNote extends Component {
                 <Text style={styles.title}>Add Note:</Text>
                 <TouchableOpacity
                   activeOpacity={0.5}
-                  onPress={() => close(false)}
+                  onPress={() => closeModal(false)}
                 >
                   <Text style={styles.close}>X</Text>
                 </TouchableOpacity>
@@ -45,12 +53,12 @@ export default class AddNote extends Component {
             </View>
           </View>
         </Modal>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
 
 AddNote.propTypes = {
-  open: PropTypes.bool.isRequired,
-  close: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };
