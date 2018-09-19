@@ -3,6 +3,7 @@ import { View, TouchableOpacity, FlatList } from 'react-native';
 import styles from './styles';
 import Note from './Note';
 import { AddIcon } from '../Icons/AddIcon';
+import NoItems from '../../components/NoItems';
 import PropTypes from 'prop-types';
 
 const NoteList = ({ notes, showModal }) => {
@@ -13,6 +14,7 @@ const NoteList = ({ notes, showModal }) => {
         data={notesArr.sort((a, b) => b.createdAt - a.createdAt)}
         keyExtractor={item => '' + item.id}
         renderItem={({ item }) => <Note item={item} />}
+        ListEmptyComponent={<NoItems message="No current notes" />}
       />
       <TouchableOpacity
         activeOpacity={0.8}
