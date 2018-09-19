@@ -100,11 +100,13 @@ export default class Note extends Component {
         <UserContext.Consumer>
           {values => (
             <View style={styles.container}>
-              {/* TODO: Change commentor's name depending on who wrote it? */}
-              {/* TODO: Show only first name?  */}
-              <Text style={styles.noteTitle}>{`Posted by ${
-                item.creator.firstname
-              } -- ${moment(item.createdAt).format('MMMM Do YYYY')}`}</Text>
+              <Text style={styles.noteTitle}>
+                Posted by{' '}
+                {item.creator.firstname === this.props.child.parent.firstname
+                  ? 'you'
+                  : item.creator.firstname}{' '}
+                -- {moment(item.createdAt).format('MMMM Do YYYY')}
+              </Text>
 
               <StarIcon important={item.starred} />
             </View>
@@ -139,4 +141,5 @@ Note.propTypes = {
     createdAt: PropTypes.string.isRequired,
     starred: PropTypes.bool.isRequired,
   }),
+  child: PropTypes.object.isRequired,
 };
