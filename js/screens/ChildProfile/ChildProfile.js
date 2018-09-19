@@ -60,7 +60,7 @@ const ChildProfile = ({
         {showUpdates ? (
           <ChildUpdates updates={child.updates} navigation={navigation} />
         ) : (
-          <NoteList notes={child.notes} showModal={showModal} />
+          <NoteList notes={child.notes} showModal={showModal} child={child} />
         )}
       </ScrollView>
       <AddNote isOpen={modalShown} closeModal={showModal} />

@@ -6,14 +6,14 @@ import { AddIcon } from '../Icons/AddIcon';
 import NoItems from '../NoItems';
 import PropTypes from 'prop-types';
 
-const NoteList = ({ notes, showModal }) => {
+const NoteList = ({ notes, showModal, child }) => {
   const notesArr = [...notes];
   return (
     <View style={styles.root}>
       <FlatList
         data={notesArr.sort((a, b) => b.createdAt - a.createdAt)}
         keyExtractor={item => '' + item.id}
-        renderItem={({ item }) => <Note item={item} />}
+        renderItem={({ item }) => <Note item={item} child={child} />}
         ListEmptyComponent={<NoItems message="No current notes" />}
       />
       <TouchableOpacity
@@ -38,5 +38,6 @@ NoteList.propTypes = {
     }),
   ),
   showModal: PropTypes.func.isRequired,
+  child: PropTypes.object.isRequired,
 };
 export default NoteList;
