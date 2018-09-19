@@ -41,25 +41,21 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     paddingVertical: 15,
   },
-  moodStats:{
+  moodStats: {
     flexDirection: 'row',
-    alignItems: "center",
-
+    alignItems: 'center',
   },
-  moodType:{
+  moodType: {
     flexDirection: 'row',
-    alignItems: "center",
+    alignItems: 'center',
   },
-  moodDescription:{
+  moodDescription: {
     fontFamily: typography.mainFont,
     fontSize: 16,
     color: colors.darkPurple,
     fontWeight: '500',
-    alignItems: "center",
+    alignItems: 'center',
   },
-
-
-
 
   container: {
     marginHorizontal: 25,
@@ -73,7 +69,7 @@ const styles = StyleSheet.create({
     },
     borderRadius: 7,
   },
- 
+
   title: {
     marginBottom: 10,
     fontSize: 18,

@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Text } from 'react-native';
+import LoadingScreen from '../../components/LoadingScreen';
+import QueryError from '../../components/QueryError';
 
 const CHILD_DATA = gql`
   query($id: ID!) {
@@ -33,9 +35,8 @@ export default class ProfileContainer extends Component {
     return (
       <Query query={CHILD_DATA} variables={{ id: userId }}>
         {({ loading, error, data: { User } }) => {
-          //TODO: Loading and Errors implemented in another issue
-          if (loading) return <Text>Loading</Text>;
-          if (error) return <Text> Error</Text>;
+          if (loading) return <LoadingScreen />;
+          if (error) return <QueryError />;
           return <Profile data={User.child} />;
         }}
       </Query>

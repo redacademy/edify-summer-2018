@@ -5,6 +5,7 @@ import styles from './styles';
 import PropTypes from 'prop-types';
 
 const ChildInfoForm = ({ updateFormValues, child }) => {
+  const parentName = `${child.parent.firstname} ${child.parent.lastname}`;
   return (
     <Form
       onSubmit={() => {}}
@@ -19,7 +20,7 @@ const ChildInfoForm = ({ updateFormValues, child }) => {
                   textContentType="name"
                   placeholder="parent name"
                   {...input}
-                  value={child.parent.name}
+                  value={parentName}
                   onChangeText={() => {
                     updateFormValues(values);
                   }}
@@ -94,7 +95,8 @@ ChildInfoForm.propTypes = {
     parent: PropTypes.shape({
       email: PropTypes.string.isRequired,
       phone: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
+      firstname: PropTypes.string.isRequired,
+      lastname: PropTypes.string.isRequired,
     }),
     name: PropTypes.string.isRequired,
   }).isRequired,

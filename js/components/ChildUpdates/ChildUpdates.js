@@ -10,7 +10,6 @@ const ChildUpdates = ({ updates, navigation }) => {
       <FlatList
         data={formatUpdatesData(updates)}
         renderItem={({ item }) => (
-          
           <View>
             <Text style={styles.title}>{item.title}</Text>
             <FlatList
@@ -19,10 +18,10 @@ const ChildUpdates = ({ updates, navigation }) => {
               renderItem={({ item }) => (
                 <TouchableOpacity
                   onPress={() => {
-                    navigation.navigate('ChildPost', { postId: item.id});
+                    navigation.navigate('ChildPost', { postId: item.id });
                   }}
                 >
-                  <Image source={{uri: item.imageurl}} style={styles.image} />
+                  <Image source={{ uri: item.imageurl }} style={styles.image} />
                 </TouchableOpacity>
               )}
               ItemSeparatorComponent={() => <View style={styles.divider} />}

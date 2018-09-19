@@ -24,7 +24,7 @@ export default class ResourcesContainer extends Component {
         `}
       >
         {({ loading, error, data: { allResources } }) => {
-          if (loading) return <LoadingScreen />; //Proper Loading screen and error will be aded in another sprint
+          if (loading) return <LoadingScreen />;
           if (error) return <QueryError />;
           return (
             <Resources
