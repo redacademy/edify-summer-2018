@@ -7,11 +7,10 @@ import NoItems from '../NoItems';
 import PropTypes from 'prop-types';
 
 const NoteList = ({ notes, showModal, child }) => {
-  const notesArr = [...notes];
   return (
     <View style={styles.root}>
       <FlatList
-        data={notesArr.sort((a, b) => b.createdAt - a.createdAt)}
+        data={notes}
         keyExtractor={item => '' + item.id}
         renderItem={({ item }) => <Note item={item} child={child} />}
         ListEmptyComponent={<NoItems message="No current notes" />}
