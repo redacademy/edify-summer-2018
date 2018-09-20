@@ -83,7 +83,6 @@ const NavigationLayout = createBottomTabNavigator(
   },
 
   {
-    //  initialRouteName: 'Edify', //delete this line later
     modeModal: true,
     navigationOptions: ({ navigation }) => ({
       tabBarIcon: ({ tintColor }) => {
@@ -121,10 +120,10 @@ const NavigationLayout = createBottomTabNavigator(
 
 export default createStackNavigator(
   {
-    NavigationLayout,
     onBoarding: {
       screen: OnboardingScreen,
     },
+    NavigationLayout,
   },
   {
     mode: 'modal',
