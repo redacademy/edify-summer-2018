@@ -58,6 +58,7 @@ after following the above steps. `cd` into the directory and run the following c
 
 # Demo
 
+![edify](https://user-images.githubusercontent.com/36652784/45841225-ff291480-bccd-11e8-97f7-3a1e052ecadc.gif)
 
 
 
