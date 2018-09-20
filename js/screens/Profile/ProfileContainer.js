@@ -3,7 +3,6 @@ import Profile from './Profile';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-import { Text } from 'react-native';
 import LoadingScreen from '../../components/LoadingScreen';
 import QueryError from '../../components/QueryError';
 
@@ -30,7 +29,7 @@ export default class ProfileContainer extends Component {
   };
 
   render() {
-    userId = this.props.navigation.getParam('userId');
+    const userId = this.props.navigation.getParam('userId');
 
     return (
       <Query query={CHILD_DATA} variables={{ id: userId }}>

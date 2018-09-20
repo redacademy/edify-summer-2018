@@ -25,6 +25,7 @@ class OnboardingContainer extends Component {
             <OnboardingPage
               navigation={this.props.navigation}
               toggleOnboarding={toggleOnboard}
+              userId={userId}
             />
           );
         }}

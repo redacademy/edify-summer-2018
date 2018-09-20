@@ -35,7 +35,7 @@ const Skip = ({ pressed }) => {
 
 let deviceWidth = Dimensions.get('window').width;
 
-const OnboardingPage = ({ navigation, toggleOnboarding }) => {
+const OnboardingPage = ({ navigation, toggleOnboarding, userId }) => {
   return (
     <View style={styles.root}>
       <Onboarding
@@ -44,7 +44,7 @@ const OnboardingPage = ({ navigation, toggleOnboarding }) => {
         showDone={true}
         onDone={() => {
           toggleOnboarding();
-          navigation.navigate('Profile');
+          navigation.navigate('Profile', { userId });
         }}
         imageContainerStyles={{
           width: deviceWidth,
@@ -58,7 +58,7 @@ const OnboardingPage = ({ navigation, toggleOnboarding }) => {
           <Skip
             pressed={() => {
               toggleOnboarding();
-              navigation.navigate('Profile');
+              navigation.navigate('Profile', { userId });
             }}
           />
         )}
