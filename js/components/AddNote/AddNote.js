@@ -17,6 +17,13 @@ export default class AddNote extends Component {
       text: '',
     };
   }
+  _handleNoteSubmit = () => {
+    if (this.state.text === '') return;
+    this.props.addNote(this.state.text);
+    this.setState({ text: '' }, () => {
+      this.props.closeModal(false);
+    });
+  };
   render() {
     const { isOpen, closeModal } = this.props;
     return (
@@ -47,7 +54,11 @@ export default class AddNote extends Component {
                 value={this.state.text}
                 style={styles.textInput}
               />
-              <TouchableOpacity activeOpacity={0.5} style={styles.button}>
+              <TouchableOpacity
+                activeOpacity={0.5}
+                style={styles.button}
+                onPress={this._handleNoteSubmit}
+              >
                 <Text style={styles.submit}>Submit</Text>
               </TouchableOpacity>
             </View>
@@ -61,4 +72,5 @@ export default class AddNote extends Component {
 AddNote.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  addNote: PropTypes.func.isRequired,
 };

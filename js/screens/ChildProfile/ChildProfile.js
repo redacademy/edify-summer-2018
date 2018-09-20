@@ -16,6 +16,7 @@ const ChildProfile = ({
   showModal,
   modalShown,
   navigation,
+  addNote,
 }) => {
   return (
     <View style={styles.root}>
@@ -63,7 +64,7 @@ const ChildProfile = ({
           <NoteList notes={child.notes} showModal={showModal} child={child} />
         )}
       </ScrollView>
-      <AddNote isOpen={modalShown} closeModal={showModal} />
+      <AddNote isOpen={modalShown} closeModal={showModal} addNote={addNote} />
     </View>
   );
 };
@@ -75,6 +76,7 @@ ChildProfile.propTypes = {
   showModal: PropTypes.func.isRequired,
   modalShown: PropTypes.bool.isRequired,
   navigation: PropTypes.object.isRequired,
+  addNote: PropTypes.func.isRequired,
 };
 
 export default ChildProfile;
