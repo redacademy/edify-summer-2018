@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  KeyboardAvoidingView,
+} from 'react-native';
 import ProfileCard from '../../components/ProfileCard';
 import OutlinedButton from '../../components/OutlinedButton';
 import PropTypes from 'prop-types';
@@ -25,70 +31,73 @@ const ChildInfo = ({
   resetForm,
 }) => {
   return (
-    <ScrollView style={styles.root}>
-      <View style={styles.buttonContainer}>
-        <OutlinedButton
-          title={editChildInfo ? 'Done' : 'Edit'}
-          color={colors.teal}
-          pressed={
-            editChildInfo
-              ? async () => {
-                  parentNames = values.parentName.split(' ');
+    <KeyboardAvoidingView behavior="position">
+      <ScrollView style={styles.root}>
+        <View style={styles.buttonContainer}>
+          <OutlinedButton
+            title={editChildInfo ? 'Done' : 'Edit'}
+            color={colors.teal}
+            pressed={
+              editChildInfo
+                ? async () => {
+                    parentNames = values.parentName.split(' ');
 
-                  await updateUser({
-                    variables: {
-                      id: child.parent.id,
-                      firstname: parentNames[0],
-                      lastname: parentNames[1],
-                      phone: values.phone,
-                      email: values.email,
-                    },
-                  });
+                    await updateUser({
+                      variables: {
+                        id: child.parent.id,
+                        firstname: parentNames[0],
+                        lastname: parentNames[1],
+                        phone: values.phone,
+                        email: values.email,
+                      },
+                    });
 
-                  await updateChild({
-                    variables: {
-                      childId: child.id,
-                      childName: values.childName,
-                    },
-                  });
+                    await updateChild({
+                      variables: {
+                        childId: child.id,
+                        childName: values.childName,
+                      },
+                    });
 
-                  resetForm();
-                }
-              : () => showEditInfo()
-          }
-          titleStyle={{
-            paddingHorizontal: 2,
-            textAlignVertical: 'center',
-          }}
-        />
-      </View>
-      <ProfileCard
-        avatar={child.avatar.imageurl}
-        action={<ActionButton pressed={() => {}} />}
-      />
-      <View style={styles.formContainer}>
-        {editChildInfo ? (
-          <ChildInfoForm
-            updateFormValues={updateFormValues}
-            child={child}
-            setFormValues={setFormValues}
+                    resetForm();
+                  }
+                : () => showEditInfo()
+            }
+            titleStyle={{
+              paddingHorizontal: 2,
+              textAlignVertical: 'center',
+            }}
           />
-        ) : (
-          <View>
-            <Text style={styles.title}>Parent Name</Text>
-            <Text style={styles.info}>
-              {child.parent.firstname} {child.parent.lastname}
-            </Text>
-            <Text style={styles.title}>Child Name</Text>
-            <Text style={styles.info}>{child.name}</Text>
-            <Text style={styles.title}>Parent Email</Text>
-            <Text style={styles.info}>{child.parent.email}</Text>
-            <Text style={styles.title}>Parent Phone</Text>
-            <Text style={styles.info}>{child.parent.phone}</Text>
-          </View>
-        )}
-      </View>
-    </ScrollView>
+        </View>
+        <ProfileCard
+          avatar={child.avatar.imageurl}
+          action={<ActionButton pressed={() => {}} />}
+        />
+        <View style={styles.formContainer}>
+          {editChildInfo ? (
+            <ChildInfoForm
+              updateFormValues={updateFormValues}
+              child={child}
+              setFormValues={setFormValues}
+            />
+          ) : (
+            <View>
+              <Text style={styles.title}>Parent Name</Text>
+              <Text style={styles.info}>
+                {child.parent.firstname} {child.parent.lastname}
+              </Text>
+              <Text style={styles.title}>Child Name</Text>
+              <Text style={styles.info}>{child.name}</Text>
+              <Text style={styles.title}>Parent Email</Text>
+              <Text style={styles.info}>{child.parent.email}</Text>
+              <Text style={styles.title}>Parent Phone</Text>
+              <Text style={styles.info}>{child.parent.phone}</Text>
+            </View>
+          )}
+        </View>
+      </ScrollView>
+      <View style={{ height: 150 }} />
+    </KeyboardAvoidingView>
   );
 };
 
