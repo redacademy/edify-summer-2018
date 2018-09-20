@@ -12,6 +12,7 @@ type User @model {
   post: [Posts!]! @relation(name: "PostsOnUser") #PU2
   createdAt: DateTime! # read-only (managed by Graphcool)
   updatedAt: DateTime! # read-only (managed by Graphcool)
+  comments: [Comment!]! @relation(name: "CommentOnUser") #CU2
 }
 
 type Child @model {
@@ -53,8 +54,8 @@ type Posts @model {
   tag: [Tags!]! @relation(name: "PostsOnTags") #PT1
   mood: Mood! @relation(name: "PostsOnMood") #PM1
   description: String
-  comments: String
   child: Child! @relation(name: "ChildOnPost") #CP2
+  comment: [Comment!]! @relation(name: "CommentOnPost") #CP2
 }
 type Mood @model {
   id: ID! @isUnique
@@ -86,4 +87,12 @@ type Resource @model {
   id: ID! @isUnique
   title: String!
   link: String!
+}
+
+type Comment @model{
+  id: ID! @isUnique
+  user: User! @relation(name: "CommentOnUser") #CU1
+  text: String!
+  createdAt:DateTime!
+  post: Posts! @relation(name: "CommentOnPost") #CP1
 }
